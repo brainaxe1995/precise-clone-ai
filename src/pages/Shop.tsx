@@ -85,7 +85,7 @@ const Shop = () => {
       <section className="py-16 text-center">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-6xl font-heading mb-6">
-            Shop <span className="text-primary">RELEX Tea</span>
+            Natural Sleep Support with <span className="text-primary">RELEX Tea</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Discover our collection of premium herbal teas crafted in the USA to support your relaxation and evening routine.

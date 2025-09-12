@@ -6,21 +6,21 @@
 
 @layer base {
   :root {
-    /* RLEX Brand Colors - Dark Forest Green & Light Green */
+    /* RELEX Brand Colors - Only Two Greens (from uploaded image) */
     --background: 0 0% 100%;
-    --foreground: 145 70% 15%;
+    --foreground: 31 69 40;
     
     /* Primary Brand Colors - Dark Forest Green */
-    --primary: 145 70% 25%;
+    --primary: 148 50% 20%;
     --primary-foreground: 0 0% 100%;
     
-    /* Secondary - Light Green */
-    --secondary: 95 45% 70%;
-    --secondary-foreground: 145 70% 15%;
+    /* Secondary - Light Sage Green */
+    --secondary: 80 35% 55%;
+    --secondary-foreground: 148 50% 20%;
     
-    /* Accent - Solid Deep Yellow (sparingly used) */
-    --accent: 45 95% 55%;
-    --accent-foreground: 145 70% 15%;
+    /* Accent - Same as Secondary (No Yellow) */
+    --accent: 80 35% 55%;
+    --accent-foreground: 148 50% 20%;
     
     /* Muted colors */
     --muted: 120 25% 94%;

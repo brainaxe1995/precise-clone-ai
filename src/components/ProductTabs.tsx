@@ -17,46 +17,48 @@ const ProductTabs = () => {
     {
       id: 1,
       name: "RELEX Chamomile Dreams",
-      price: "$24.99",
+      description: "Pure chamomile flowers for gentle evening relaxation",
+      price: 24.99,
+      originalPrice: 34.99,
       rating: 4.8,
-      discount: "30% OFF",
-      images: [
-        "/api/placeholder/400/400",
-        "/api/placeholder/400/400"
-      ]
+      reviews: 342,
+      image: "/api/placeholder/300/300",
+      badge: "Best Seller",
+      benefits: ["May support relaxation", "Caffeine-free", "USDA Organic"]
     },
     {
       id: 2,
       name: "RELEX Lavender Nights",
-      price: "$29.99",
+      description: "Lavender and lemon balm blend for peaceful evenings",
+      price: 29.99,
+      originalPrice: 39.99,
       rating: 4.9,
-      discount: "25% OFF",
-      images: [
-        "/api/placeholder/400/400",
-        "/api/placeholder/400/400"
-      ]
+      reviews: 288,
+      image: "/api/placeholder/300/300",
+      badge: "Premium",
+      benefits: ["Natural calming herbs", "Sleep routine support", "Premium quality"]
     },
     {
       id: 3,
       name: "RELEX Passionflower Calm",
-      price: "$26.99",
+      description: "Traditional passionflower for tranquil moments",
+      price: 26.99,
       rating: 4.7,
-      discount: "20% OFF",
-      images: [
-        "/api/placeholder/400/400",
-        "/api/placeholder/400/400"
-      ]
+      reviews: 189,
+      image: "/api/placeholder/300/300",
+      benefits: ["Caffeine-free", "Traditional herb", "Evening wellness"]
     },
     {
       id: 4,
       name: "RELEX Valerian Root Blend",
-      price: "$32.99",
+      description: "Time-honored valerian root with complementary herbs",
+      price: 32.99,
+      originalPrice: 42.99,
       rating: 4.6,
-      discount: "15% OFF",
-      images: [
-        "/api/placeholder/400/400",
-        "/api/placeholder/400/400"
-      ]
+      reviews: 156,
+      image: "/api/placeholder/300/300",
+      badge: "Traditional",
+      benefits: ["Traditional use", "Evening ritual", "Natural ingredients"]
     }
   ];
 
@@ -65,7 +67,7 @@ const ProductTabs = () => {
       <div className="container mx-auto px-4">
         {/* Section Title */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-heading mb-8 text-center">Shop Our Premium Teas</h2>
+          <h2 className="text-3xl md:text-4xl font-heading mb-8 text-center">Natural Sleep Support Collection</h2>
           
           {/* Tabs */}
           <div className="flex flex-wrap justify-center gap-2 mb-8">
@@ -90,17 +92,17 @@ const ProductTabs = () => {
           {products.map((product) => (
             <Card key={product.id} className="group overflow-hidden border-card-border hover:shadow-lg transition-all duration-300">
               <div className="relative overflow-hidden">
-                {/* Discount Badge */}
-                {product.discount && (
-                  <Badge className="absolute top-3 left-3 z-10 bg-red-500 text-white">
-                    {product.discount}
+                {/* Badge */}
+                {product.badge && (
+                  <Badge className="absolute top-3 left-3 z-10 bg-primary text-primary-foreground">
+                    {product.badge}
                   </Badge>
                 )}
                 
                 {/* Product Image */}
                 <div className="aspect-square overflow-hidden">
                   <img
-                    src={product.images[0]}
+                    src={product.image}
                     alt={product.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
@@ -128,13 +130,13 @@ const ProductTabs = () => {
                       key={i} 
                       className={`h-4 w-4 ${
                         i < Math.floor(product.rating) 
-                          ? "fill-yellow-400 text-yellow-400" 
+                          ? "fill-primary text-primary" 
                           : "text-gray-300"
-                      }`} 
+                      }`}
                     />
                   ))}
                   <span className="text-sm text-gray-600 ml-1">
-                    Rated {product.rating} out of 5
+                    ({product.reviews})
                   </span>
                 </div>
                 
@@ -143,12 +145,33 @@ const ProductTabs = () => {
                   {product.name}
                 </h3>
                 
-                {/* Price */}
-                <p className="text-accent font-bold text-lg mb-4">
-                  {product.price}
+                {/* Description */}
+                <p className="text-sm text-muted-foreground mb-3">
+                  {product.description}
                 </p>
+
+                {/* Benefits */}
+                <div className="flex flex-wrap gap-1 mb-3">
+                  {product.benefits.map((benefit, index) => (
+                    <Badge key={index} variant="secondary" className="text-xs">
+                      {benefit}
+                    </Badge>
+                  ))}
+                </div>
                 
-                {/* Add to Cart Button */}
+                {/* Price */}
+                <div className="flex items-center justify-center gap-2 mb-4">
+                  <span className="text-xl font-bold text-primary">
+                    ${product.price}
+                  </span>
+                  {product.originalPrice && (
+                    <span className="text-sm line-through text-muted-foreground">
+                      ${product.originalPrice}
+                    </span>
+                  )}
+                </div>
+                
+                {/* Buy Now Button */}
                 <Button 
                   className="w-full bg-primary hover:bg-primary/90 font-semibold"
                   size="sm"
