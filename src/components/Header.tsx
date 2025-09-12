@@ -20,7 +20,7 @@ const Header = () => {
             <div className="bg-primary/10 p-2 rounded-lg">
               <span className="text-2xl">🍃</span>
             </div>
-            <h1 className="text-2xl font-heading font-bold text-primary">RELEX</h1>
+            <h1 className="text-2xl font-heading font-bold text-primary">RELAX</h1>
           </div>
 
           {/* Desktop Navigation */}

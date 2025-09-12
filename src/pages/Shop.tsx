@@ -9,7 +9,7 @@ const Shop = () => {
   const products = [
     {
       id: 1,
-      name: "RELEX Chamomile Dreams",
+      name: "RELAX Chamomile Dreams",
       description: "Pure chamomile flowers for gentle evening relaxation",
       price: 24.99,
       originalPrice: 34.99,
@@ -21,7 +21,7 @@ const Shop = () => {
     },
     {
       id: 2,
-      name: "RELEX Lavender Nights",
+      name: "RELAX Lavender Nights",
       description: "Lavender and lemon balm blend for peaceful evenings",
       price: 29.99,
       originalPrice: 39.99,
@@ -33,7 +33,7 @@ const Shop = () => {
     },
     {
       id: 3,
-      name: "RELEX Passionflower Calm",
+      name: "RELAX Passionflower Calm",
       description: "Traditional passionflower for tranquil moments",
       price: 26.99,
       rating: 4.7,
@@ -43,7 +43,7 @@ const Shop = () => {
     },
     {
       id: 4,
-      name: "RELEX Valerian Root Blend",
+      name: "RELAX Valerian Root Blend",
       description: "Time-honored valerian root with complementary herbs",
       price: 32.99,
       originalPrice: 42.99,
@@ -55,7 +55,7 @@ const Shop = () => {
     },
     {
       id: 5,
-      name: "RELEX Lemon Balm Serenity",
+      name: "RELAX Lemon Balm Serenity",
       description: "Soothing lemon balm for gentle evening comfort",
       price: 22.99,
       rating: 4.8,
@@ -65,7 +65,7 @@ const Shop = () => {
     },
     {
       id: 6,
-      name: "RELEX Evening Ritual Set",
+      name: "RELAX Evening Ritual Set",
       description: "Complete collection of our most popular evening teas",
       price: 79.99,
       originalPrice: 119.99,
@@ -85,7 +85,7 @@ const Shop = () => {
       <section className="py-16 text-center">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-6xl font-heading mb-6">
-            Natural Sleep Support with <span className="text-primary">RELEX Tea</span>
+            Natural Evening Wellness with <span className="text-primary">RELAX Tea</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Discover our collection of premium herbal teas crafted in the USA to support your relaxation and evening routine.

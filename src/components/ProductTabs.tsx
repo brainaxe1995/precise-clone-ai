@@ -16,7 +16,7 @@ const ProductTabs = () => {
   const products = [
     {
       id: 1,
-      name: "RELEX Chamomile Dreams",
+      name: "RELAX Chamomile Dreams",
       description: "Pure chamomile flowers for gentle evening relaxation",
       price: 24.99,
       originalPrice: 34.99,
@@ -28,7 +28,7 @@ const ProductTabs = () => {
     },
     {
       id: 2,
-      name: "RELEX Lavender Nights",
+      name: "RELAX Lavender Nights",
       description: "Lavender and lemon balm blend for peaceful evenings",
       price: 29.99,
       originalPrice: 39.99,
@@ -40,7 +40,7 @@ const ProductTabs = () => {
     },
     {
       id: 3,
-      name: "RELEX Passionflower Calm",
+      name: "RELAX Passionflower Calm",
       description: "Traditional passionflower for tranquil moments",
       price: 26.99,
       rating: 4.7,
@@ -50,7 +50,7 @@ const ProductTabs = () => {
     },
     {
       id: 4,
-      name: "RELEX Valerian Root Blend",
+      name: "RELAX Valerian Root Blend",
       description: "Time-honored valerian root with complementary herbs",
       price: 32.99,
       originalPrice: 42.99,

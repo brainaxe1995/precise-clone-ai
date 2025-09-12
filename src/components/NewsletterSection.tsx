@@ -20,7 +20,7 @@ const NewsletterSection = () => {
           <div className="space-y-8">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-primary">
-                Join the RELEX Sleep Club
+                Join the RELAX Sleep Club
               </h2>
               <p className="text-lg md:text-xl text-primary/70 leading-relaxed">
                 Get exclusive access to new sleep support tea releases, expert brewing tips for better rest, 

@@ -19,7 +19,7 @@ const Footer = () => {
               <div className="glass-green p-2 rounded-lg">
                 <span className="text-xl">🍃</span>
               </div>
-              <h3 className="text-2xl font-heading font-bold">RELEX</h3>
+              <h3 className="text-2xl font-heading font-bold">RELAX</h3>
             </div>
             <p className="text-sm opacity-90 leading-relaxed mb-4">
               Premium herbal teas designed to support natural relaxation and evening routines. 
@@ -63,11 +63,11 @@ const Footer = () => {
             <div className="space-y-3 text-sm mb-6">
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-accent" />
-                <span className="opacity-90">info@relex-tea.com</span>
+                <span className="opacity-90">info@relax-tea.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-accent" />
-                <span className="opacity-90">1-800-RELEX-TEA</span>
+                <span className="opacity-90">1-800-RELAX-TEA</span>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="h-4 w-4 text-accent mt-0.5" />
@@ -81,7 +81,7 @@ const Footer = () => {
         {/* Additional Footer Links - Removed Categories Section */}
         <div className="border-t border-header-foreground/20 pt-8">
           <div className="text-center mb-8">
-            <p className="text-sm opacity-80 mb-4">© 2025 RELEX Tea. All rights reserved.</p>
+            <p className="text-sm opacity-80 mb-4">© 2025 RELAX Tea. All rights reserved.</p>
             <div className="flex flex-col md:flex-row justify-center items-center gap-6">
               <div className="flex gap-6">
                 <Link to="/privacy" className="text-sm hover:text-accent transition-colors opacity-80 hover:opacity-100">

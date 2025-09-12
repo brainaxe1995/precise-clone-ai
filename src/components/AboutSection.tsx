@@ -7,7 +7,7 @@ const AboutSection = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Section Label */}
           <p className="text-accent text-sm font-medium tracking-wider uppercase mb-6 animate-slide-up">
-            ABOUT RELEX
+            ABOUT RELAX
           </p>
           
           {/* Main Heading */}
@@ -18,7 +18,7 @@ const AboutSection = () => {
           
           {/* Description */}
           <p className="text-lg md:text-xl leading-relaxed mb-10 opacity-90 max-w-3xl mx-auto animate-slide-in-right">
-            At RELEX, we believe in the power of nature to support your evening routine. Our carefully crafted herbal blends are designed for those seeking natural ways to unwind and prepare for restful nights. Every cup is made with premium organic ingredients to support your wellness journey.
+            At RELAX, we believe in the power of nature to support your evening routine. Our carefully crafted herbal blends are designed for those seeking natural ways to unwind and prepare for restful nights. Every cup is made with premium organic ingredients to support your wellness journey.
           </p>
           
           {/* CTA Button */}

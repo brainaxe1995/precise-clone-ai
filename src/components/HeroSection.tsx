@@ -25,7 +25,7 @@ const HeroSection = () => {
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading leading-tight mb-8 text-primary">
               Premium Evening Wellness with{' '}
               <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent font-bold">
-                RELEX Tea
+                RELAX Tea
               </span>
             </h1>
             
@@ -39,7 +39,7 @@ const HeroSection = () => {
                 size="lg" 
                 className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 text-lg font-bold transition-all duration-500 hover:scale-105 shadow-xl rounded-full"
               >
-                Shop RELEX Tea Now
+                Shop RELAX Tea Now
               </Button>
               <Button 
                 variant="outline"
@@ -73,7 +73,7 @@ const HeroSection = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-secondary/20 to-primary/20 rounded-3xl blur-3xl"></div>
               <img
                 src={heroImage}
-                alt="RELEX Premium Herbal Tea for Natural Sleep Support"
+                alt="RELAX Premium Herbal Tea for Evening Wellness"
                 className="relative w-full h-auto rounded-3xl shadow-2xl hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute -top-4 -right-4 bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-bold shadow-lg animate-bounce">

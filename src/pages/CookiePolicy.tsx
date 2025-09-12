@@ -54,9 +54,9 @@ const CookiePolicy = () => {
               <p>
                 If you have any questions about this Cookie Policy, please contact us at:
                 <br />
-                Email: support@relex-tea.com
+                Email: support@relax-tea.com
                 <br />
-                Phone: 1-800-RELEX-TEA
+                Phone: 1-800-RELAX-TEA
               </p>
             </section>
           </div>

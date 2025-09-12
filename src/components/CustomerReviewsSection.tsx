@@ -9,7 +9,7 @@ const CustomerReviewsSection = () => {
       rating: 5,
       date: "2 days ago",
       title: "Absolutely amazing quality!",
-      text: "I've been a tea lover for years, but nothing compares to the quality of RELEX. The Lavender Dreams blend is my new favorite - helps me sleep so peacefully.",
+      text: "I've been a tea lover for years, but nothing compares to the quality of RELAX. The Lavender Dreams blend is my new favorite - helps me sleep so peacefully.",
       avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b586?w=60&h=60&fit=crop&crop=face",
       verified: true
     },

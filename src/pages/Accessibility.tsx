@@ -20,7 +20,7 @@ const Accessibility = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-heading mb-4 text-foreground">Our Commitment</h2>
               <p className="mb-4">
-                RELEX Tea is committed to ensuring digital accessibility for people with disabilities. 
+                RELAX Tea is committed to ensuring digital accessibility for people with disabilities. 
                 We are continually improving the user experience for everyone and applying the relevant accessibility standards.
               </p>
             </section>
@@ -53,16 +53,16 @@ const Accessibility = () => {
                 Please let us know if you encounter accessibility barriers:
               </p>
               <ul className="list-disc list-inside mb-4 space-y-2">
-                <li>Email: accessibility@relex-tea.com</li>
-                <li>Phone: 1-800-RELEX-TEA</li>
-                <li>Mail: RELEX Tea Accessibility Team, 123 Tea Street, Portland, OR 97201</li>
+                <li>Email: accessibility@relax-tea.com</li>
+                <li>Phone: 1-800-RELAX-TEA</li>
+                <li>Mail: RELAX Tea Accessibility Team, 123 Tea Street, Portland, OR 97201</li>
               </ul>
             </section>
             
             <section className="mb-8">
               <h2 className="text-2xl font-heading mb-4 text-foreground">Assessment Approach</h2>
               <p className="mb-4">
-                RELEX Tea assessed the accessibility of our website by:
+                RELAX Tea assessed the accessibility of our website by:
               </p>
               <ul className="list-disc list-inside mb-4 space-y-2">
                 <li>Self-evaluation using accessibility testing tools</li>
