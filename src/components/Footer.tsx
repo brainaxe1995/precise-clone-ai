@@ -1,6 +1,7 @@
 import { Facebook, Twitter, Instagram, Youtube, Mail, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const handleNewsletterSubmit = (e: React.FormEvent) => {
@@ -36,12 +37,10 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4 text-lg">Quick Links</h4>
             <ul className="space-y-3 text-sm">
-              <li><a href="#" className="hover:text-accent transition-colors opacity-90 hover:opacity-100">About Us</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors opacity-90 hover:opacity-100">Our Story</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors opacity-90 hover:opacity-100">Tea Education</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors opacity-90 hover:opacity-100">Sustainability</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors opacity-90 hover:opacity-100">Wholesale</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors opacity-90 hover:opacity-100">Press</a></li>
+              <li><Link to="/about" className="hover:text-accent transition-colors opacity-90 hover:opacity-100">About Us</Link></li>
+              <li><Link to="/shop" className="hover:text-accent transition-colors opacity-90 hover:opacity-100">Shop Now</Link></li>
+              <li><Link to="/blog" className="hover:text-accent transition-colors opacity-90 hover:opacity-100">Wellness Blog</Link></li>
+              <li><Link to="/contact" className="hover:text-accent transition-colors opacity-90 hover:opacity-100">Contact Us</Link></li>
             </ul>
           </div>
 
@@ -49,12 +48,10 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4 text-lg">Customer Service</h4>
             <ul className="space-y-3 text-sm">
-              <li><a href="#" className="hover:text-accent transition-colors opacity-90 hover:opacity-100">Contact Us</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors opacity-90 hover:opacity-100">FAQ</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors opacity-90 hover:opacity-100">Shipping Info</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors opacity-90 hover:opacity-100">Returns & Exchanges</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors opacity-90 hover:opacity-100">Size Guide</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors opacity-90 hover:opacity-100">Track Your Order</a></li>
+              <li><Link to="/contact" className="hover:text-accent transition-colors opacity-90 hover:opacity-100">Contact Us</Link></li>
+              <li><Link to="/faq" className="hover:text-accent transition-colors opacity-90 hover:opacity-100">FAQ</Link></li>
+              <li><span className="opacity-60">Free Shipping on All Orders</span></li>
+              <li><span className="opacity-60">30-Day Wellness Guarantee</span></li>
             </ul>
           </div>
 
@@ -78,45 +75,27 @@ const Footer = () => {
               </div>
             </div>
             
-            {/* Mini Newsletter */}
-            <div>
-              <h5 className="font-medium mb-3">Newsletter</h5>
-              <form onSubmit={handleNewsletterSubmit} className="space-y-3">
-                <Input 
-                  type="email" 
-                  placeholder="Your email" 
-                  className="bg-white/10 border-white/20 text-white placeholder:text-white/70"
-                />
-                <Button 
-                  type="submit" 
-                  size="sm" 
-                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
-                >
-                  Subscribe
-                </Button>
-              </form>
-            </div>
           </div>
         </div>
 
         {/* Additional Footer Links - Removed Categories Section */}
         <div className="border-t border-header-foreground/20 pt-8">
           <div className="text-center mb-8">
-            <p className="text-sm opacity-80 mb-4">© 2024 RELEX Tea. All rights reserved.</p>
+            <p className="text-sm opacity-80 mb-4">© 2025 RELEX Tea. All rights reserved.</p>
             <div className="flex flex-col md:flex-row justify-center items-center gap-6">
               <div className="flex gap-6">
-                <a href="/privacy" className="text-sm hover:text-accent transition-colors opacity-80 hover:opacity-100">
+                <Link to="/privacy" className="text-sm hover:text-accent transition-colors opacity-80 hover:opacity-100">
                   Privacy Policy
-                </a>
-                <a href="/terms" className="text-sm hover:text-accent transition-colors opacity-80 hover:opacity-100">
+                </Link>
+                <Link to="/terms" className="text-sm hover:text-accent transition-colors opacity-80 hover:opacity-100">
                   Terms of Service
-                </a>
-                <a href="/cookies" className="text-sm hover:text-accent transition-colors opacity-80 hover:opacity-100">
+                </Link>
+                <Link to="/cookies" className="text-sm hover:text-accent transition-colors opacity-80 hover:opacity-100">
                   Cookie Policy
-                </a>
-                <a href="/accessibility" className="text-sm hover:text-accent transition-colors opacity-80 hover:opacity-100">
+                </Link>
+                <Link to="/accessibility" className="text-sm hover:text-accent transition-colors opacity-80 hover:opacity-100">
                   Accessibility
-                </a>
+                </Link>
               </div>
               
               <div className="flex items-center gap-3 text-xs opacity-70">

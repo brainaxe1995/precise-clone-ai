@@ -3,7 +3,6 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ProductTabs from "@/components/ProductTabs";
 import ExquisiteTasteSection from "@/components/ExquisiteTasteSection";
-import BrowseByCategorySection from "@/components/BrowseByCategorySection";
 import FindRightTeaSection from "@/components/FindRightTeaSection";
 import BrandLogosSection from "@/components/BrandLogosSection";
 import CraftedByExpertsSection from "@/components/CraftedByExpertsSection";
@@ -15,13 +14,12 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen animate-fade-in">
       <Header />
       <HeroSection />
       <AboutSection />
       <ProductTabs />
       <ExquisiteTasteSection />
-      <BrowseByCategorySection />
       <FindRightTeaSection />
       <BrandLogosSection />
       <CraftedByExpertsSection />

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ShoppingCart, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,11 +25,12 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="/" className="text-sm font-medium hover:text-primary transition-colors">Home</a>
-            <a href="/shop" className="text-sm font-medium hover:text-primary transition-colors">Shop Now</a>
-            <a href="/about" className="text-sm font-medium hover:text-primary transition-colors">About</a>
-            <a href="/contact" className="text-sm font-medium hover:text-primary transition-colors">Contact</a>
-            <a href="/faq" className="text-sm font-medium hover:text-primary transition-colors">FAQ</a>
+            <Link to="/" className="text-sm font-medium hover:text-primary transition-colors">Home</Link>
+            <Link to="/shop" className="text-sm font-medium hover:text-primary transition-colors">Shop Now</Link>
+            <Link to="/blog" className="text-sm font-medium hover:text-primary transition-colors">Blog</Link>
+            <Link to="/about" className="text-sm font-medium hover:text-primary transition-colors">About</Link>
+            <Link to="/contact" className="text-sm font-medium hover:text-primary transition-colors">Contact</Link>
+            <Link to="/faq" className="text-sm font-medium hover:text-primary transition-colors">FAQ</Link>
           </nav>
 
           {/* Desktop Actions */}
@@ -54,11 +56,12 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden bg-card border-t border-border animate-slide-up">
             <nav className="flex flex-col space-y-4 py-6">
-              <a href="/" className="text-sm font-medium hover:text-primary transition-colors">Home</a>
-              <a href="/shop" className="text-sm font-medium hover:text-primary transition-colors">Shop Now</a>
-              <a href="/about" className="text-sm font-medium hover:text-primary transition-colors">About</a>
-              <a href="/contact" className="text-sm font-medium hover:text-primary transition-colors">Contact</a>
-              <a href="/faq" className="text-sm font-medium hover:text-primary transition-colors">FAQ</a>
+              <Link to="/" className="text-sm font-medium hover:text-primary transition-colors">Home</Link>
+              <Link to="/shop" className="text-sm font-medium hover:text-primary transition-colors">Shop Now</Link>
+              <Link to="/blog" className="text-sm font-medium hover:text-primary transition-colors">Blog</Link>
+              <Link to="/about" className="text-sm font-medium hover:text-primary transition-colors">About</Link>
+              <Link to="/contact" className="text-sm font-medium hover:text-primary transition-colors">Contact</Link>
+              <Link to="/faq" className="text-sm font-medium hover:text-primary transition-colors">FAQ</Link>
               <div className="flex flex-col space-y-3 pt-4 border-t border-border">
                 <Button variant="default" className="bg-primary hover:bg-primary/90">
                   <ShoppingCart className="h-4 w-4 mr-2" />
