@@ -9,7 +9,7 @@ const Shop = () => {
   const products = [
     {
       id: 1,
-      name: "RELAX Chamomile Dreams",
+      name: "Relax Chamomile Herbal tea",
       description: "Pure chamomile flowers for gentle evening relaxation",
       price: 24.99,
       originalPrice: 34.99,
@@ -21,7 +21,7 @@ const Shop = () => {
     },
     {
       id: 2,
-      name: "RELAX Lavender Nights",
+      name: "Relax Lavender Herbal tea",
       description: "Lavender and lemon balm blend for peaceful evenings",
       price: 29.99,
       originalPrice: 39.99,
@@ -33,7 +33,7 @@ const Shop = () => {
     },
     {
       id: 3,
-      name: "RELAX Passionflower Calm",
+      name: "Relax Lemon balm Herbal tea",
       description: "Traditional passionflower for tranquil moments",
       price: 26.99,
       rating: 4.7,
@@ -43,7 +43,7 @@ const Shop = () => {
     },
     {
       id: 4,
-      name: "RELAX Valerian Root Blend",
+      name: "Relax Chamomile Herbal tea",
       description: "Time-honored valerian root with complementary herbs",
       price: 32.99,
       originalPrice: 42.99,
@@ -55,7 +55,7 @@ const Shop = () => {
     },
     {
       id: 5,
-      name: "RELAX Lemon Balm Serenity",
+      name: "Relax Lemon balm Herbal tea",
       description: "Soothing lemon balm for gentle evening comfort",
       price: 22.99,
       rating: 4.8,
@@ -65,7 +65,7 @@ const Shop = () => {
     },
     {
       id: 6,
-      name: "RELAX Evening Ritual Set",
+      name: "Relax Lavender Herbal tea",
       description: "Complete collection of our most popular evening teas",
       price: 79.99,
       originalPrice: 119.99,
