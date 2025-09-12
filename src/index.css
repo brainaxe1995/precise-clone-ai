@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,21 +6,21 @@
 
 @layer base {
   :root {
-    /* RLEX Brand Colors - Natural Green & Soft Yellow */
-    --background: 120 25% 96%;
-    --foreground: 142 71% 8%;
+    /* RLEX Brand Colors - Dark Forest Green & Light Green */
+    --background: 0 0% 100%;
+    --foreground: 145 70% 15%;
     
-    /* Primary Brand Colors */
-    --primary: 142 71% 45%;
+    /* Primary Brand Colors - Dark Forest Green */
+    --primary: 145 70% 25%;
     --primary-foreground: 0 0% 100%;
     
-    /* Secondary with minimal yellow accent */
-    --secondary: 244 63% 69%;
-    --secondary-foreground: 142 71% 8%;
+    /* Secondary - Light Green */
+    --secondary: 95 45% 70%;
+    --secondary-foreground: 145 70% 15%;
     
-    /* Yellow accent (used sparingly - 10%) */
-    --accent: 48 96% 76%;
-    --accent-foreground: 142 71% 8%;
+    /* Accent - Solid Deep Yellow (sparingly used) */
+    --accent: 45 95% 55%;
+    --accent-foreground: 145 70% 15%;
     
     /* Muted colors */
     --muted: 120 25% 94%;
@@ -49,17 +49,17 @@
   }
 
   .dark {
-    --background: 142 84% 2%;
-    --foreground: 120 25% 96%;
+    --background: 145 70% 8%;
+    --foreground: 95 45% 90%;
     
-    --primary: 142 71% 55%;
-    --primary-foreground: 142 84% 2%;
+    --primary: 145 70% 35%;
+    --primary-foreground: 0 0% 100%;
     
-    --secondary: 142 30% 10%;
-    --secondary-foreground: 120 25% 96%;
+    --secondary: 145 35% 20%;
+    --secondary-foreground: 95 45% 90%;
     
-    --accent: 48 96% 76%;
-    --accent-foreground: 142 84% 2%;
+    --accent: 45 95% 65%;
+    --accent-foreground: 145 70% 8%;
     
     --muted: 142 30% 10%;
     --muted-foreground: 142 27% 77%;
@@ -90,11 +90,11 @@
   
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Inter', sans-serif;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Merriweather', serif;
+    font-family: 'Playfair Display', serif;
     @apply font-bold;
   }
 }

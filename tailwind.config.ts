@@ -53,8 +53,8 @@ export default {
         },
       },
         fontFamily: {
-          'heading': ['Merriweather', 'serif'],
-          'body': ['Source Sans Pro', 'sans-serif'],
+          'heading': ['Playfair Display', 'serif'],
+          'body': ['Inter', 'sans-serif'],
         },
       borderRadius: {
         lg: "var(--radius)",

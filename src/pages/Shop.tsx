@@ -9,49 +9,71 @@ const Shop = () => {
   const products = [
     {
       id: 1,
-      name: "RLEX Evening Calm",
-      description: "Chamomile and lavender blend to support your evening routine",
+      name: "RELEX Chamomile Dreams",
+      description: "Pure chamomile flowers for gentle evening relaxation",
       price: 24.99,
       originalPrice: 34.99,
       rating: 4.8,
-      reviews: 127,
+      reviews: 342,
       image: "/api/placeholder/300/300",
       badge: "Best Seller",
-      benefits: ["May support relaxation", "Caffeine-free", "Organic"]
+      benefits: ["May support relaxation", "Caffeine-free", "USDA Organic"]
     },
     {
       id: 2,
-      name: "RLEX Sleep Support",
-      description: "Gentle herbal blend with valerian root and passionflower",
+      name: "RELEX Lavender Nights",
+      description: "Lavender and lemon balm blend for peaceful evenings",
       price: 29.99,
       originalPrice: 39.99,
       rating: 4.9,
-      reviews: 203,
+      reviews: 288,
       image: "/api/placeholder/300/300",
       badge: "Premium",
-      benefits: ["Natural ingredients", "Sleep routine support", "Organic"]
+      benefits: ["Natural calming herbs", "Sleep routine support", "Premium quality"]
     },
     {
       id: 3,
-      name: "RLEX Nighttime Blend",
-      description: "Soothing combination of lemon balm and mint",
-      price: 19.99,
+      name: "RELEX Passionflower Calm",
+      description: "Traditional passionflower for tranquil moments",
+      price: 26.99,
       rating: 4.7,
-      reviews: 89,
+      reviews: 189,
       image: "/api/placeholder/300/300",
-      benefits: ["Caffeine-free", "Calming herbs", "Premium quality"]
+      benefits: ["Caffeine-free", "Traditional herb", "Evening wellness"]
     },
     {
       id: 4,
-      name: "RLEX Starter Pack",
-      description: "Try all our blends with this convenient starter collection",
-      price: 49.99,
-      originalPrice: 69.99,
-      rating: 4.9,
+      name: "RELEX Valerian Root Blend",
+      description: "Time-honored valerian root with complementary herbs",
+      price: 32.99,
+      originalPrice: 42.99,
+      rating: 4.6,
       reviews: 156,
       image: "/api/placeholder/300/300",
+      badge: "Traditional",
+      benefits: ["Traditional use", "Evening ritual", "Natural ingredients"]
+    },
+    {
+      id: 5,
+      name: "RELEX Lemon Balm Serenity",
+      description: "Soothing lemon balm for gentle evening comfort",
+      price: 22.99,
+      rating: 4.8,
+      reviews: 234,
+      image: "/api/placeholder/300/300",
+      benefits: ["Mild citrus flavor", "Calming properties", "Organic"]
+    },
+    {
+      id: 6,
+      name: "RELEX Evening Ritual Set",
+      description: "Complete collection of our most popular evening teas",
+      price: 79.99,
+      originalPrice: 119.99,
+      rating: 4.9,
+      reviews: 423,
+      image: "/api/placeholder/300/300",
       badge: "Value Pack",
-      benefits: ["3 tea varieties", "Perfect for beginners", "Free shipping"]
+      benefits: ["5 tea varieties", "Perfect for trying", "Always free shipping"]
     }
   ];
 
@@ -63,10 +85,10 @@ const Shop = () => {
       <section className="py-16 text-center">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-6xl font-heading mb-6">
-            Shop <span className="text-primary">RLEX Tea</span>
+            Shop <span className="text-primary">RELEX Tea</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Discover our collection of premium herbal teas designed to support your relaxation and evening routine.
+            Discover our collection of premium herbal teas crafted in the USA to support your relaxation and evening routine.
           </p>
         </div>
       </section>
@@ -158,8 +180,8 @@ const Shop = () => {
                 </CardContent>
                 
                 <CardFooter className="p-6 pt-0">
-                  <Button className="w-full bg-primary hover:bg-primary/90">
-                    Add to Cart
+                  <Button className="w-full bg-primary hover:bg-primary/90 font-semibold">
+                    Buy Now
                   </Button>
                 </CardFooter>
               </Card>
@@ -179,8 +201,8 @@ const Shop = () => {
             </div>
             <div>
               <div className="text-3xl mb-2">🚚</div>
-              <h3 className="font-semibold mb-1">Free Shipping</h3>
-              <p className="text-sm text-muted-foreground">On orders over $50</p>
+              <h3 className="font-semibold mb-1">Always Free Shipping</h3>
+              <p className="text-sm text-muted-foreground">Fast delivery across the USA</p>
             </div>
             <div>
               <div className="text-3xl mb-2">💰</div>

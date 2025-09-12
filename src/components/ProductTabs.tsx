@@ -16,46 +16,46 @@ const ProductTabs = () => {
   const products = [
     {
       id: 1,
-      name: "Chamomile Botanical Blend Sachets",
-      price: "$4.00 – $28.00",
-      rating: 4.6,
+      name: "RELEX Chamomile Dreams",
+      price: "$24.99",
+      rating: 4.8,
       discount: "30% OFF",
       images: [
-        "https://demo2.wpopal.com/teapoz/wp-content/uploads/2023/05/product_30_1-600x600.jpg",
-        "https://demo2.wpopal.com/teapoz/wp-content/uploads/2023/05/product_30_2-600x600.jpg"
+        "/api/placeholder/400/400",
+        "/api/placeholder/400/400"
       ]
     },
     {
       id: 2,
-      name: "Organic Dandelion & Peach Naturally",
-      price: "$3.00 – $21.00",
-      rating: 4.6,
-      discount: "30% OFF",
+      name: "RELEX Lavender Nights",
+      price: "$29.99",
+      rating: 4.9,
+      discount: "25% OFF",
       images: [
-        "https://demo2.wpopal.com/teapoz/wp-content/uploads/2023/05/product_29_1-600x600.jpg",
-        "https://demo2.wpopal.com/teapoz/wp-content/uploads/2023/05/product_29_2-600x600.jpg"
+        "/api/placeholder/400/400",
+        "/api/placeholder/400/400"
       ]
     },
     {
       id: 3,
-      name: "Earl Grey Supreme Loose Tea",
-      price: "$5.00 – $35.00",
-      rating: 4.8,
-      discount: "25% OFF",
+      name: "RELEX Passionflower Calm",
+      price: "$26.99",
+      rating: 4.7,
+      discount: "20% OFF",
       images: [
-        "https://demo2.wpopal.com/teapoz/wp-content/uploads/2023/05/product_28_1-600x600.jpg",
-        "https://demo2.wpopal.com/teapoz/wp-content/uploads/2023/05/product_28_2-600x600.jpg"
+        "/api/placeholder/400/400",
+        "/api/placeholder/400/400"
       ]
     },
     {
       id: 4,
-      name: "Premium Green Tea Collection",
-      price: "$6.00 – $42.00",
-      rating: 4.9,
-      discount: "20% OFF",
+      name: "RELEX Valerian Root Blend",
+      price: "$32.99",
+      rating: 4.6,
+      discount: "15% OFF",
       images: [
-        "https://demo2.wpopal.com/teapoz/wp-content/uploads/2023/05/product_27_1-600x600.jpg",
-        "https://demo2.wpopal.com/teapoz/wp-content/uploads/2023/05/product_27_2-600x600.jpg"
+        "/api/placeholder/400/400",
+        "/api/placeholder/400/400"
       ]
     }
   ];
@@ -65,7 +65,7 @@ const ProductTabs = () => {
       <div className="container mx-auto px-4">
         {/* Section Title */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">Shop Our Teas</h2>
+          <h2 className="text-3xl md:text-4xl font-heading mb-8 text-center">Shop Our Premium Teas</h2>
           
           {/* Tabs */}
           <div className="flex flex-wrap justify-center gap-2 mb-8">
@@ -150,10 +150,10 @@ const ProductTabs = () => {
                 
                 {/* Add to Cart Button */}
                 <Button 
-                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
+                  className="w-full bg-primary hover:bg-primary/90 font-semibold"
                   size="sm"
                 >
-                  Select Options
+                  Buy Now
                 </Button>
               </CardContent>
             </Card>
