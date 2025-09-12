@@ -18,7 +18,7 @@ const CraftedByExpertsSection = () => {
       name: "Michael Chen",
       role: "Master Blender", 
       rating: 5,
-      text: "Working with Teapoz has been incredible. Their commitment to quality matches our own standards.",
+      text: "Working with RELEX has been incredible. Their commitment to natural sleep support matches our own standards.",
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
     },
     {
@@ -26,7 +26,7 @@ const CraftedByExpertsSection = () => {
       name: "Emily Davis",
       role: "Tea Consultant",
       rating: 5, 
-      text: "I've recommended Teapoz to all my clients. The sourcing and processing methods are truly world-class.",
+      text: "I've recommended RELEX to all my clients. The sourcing and herbal processing methods are truly world-class.",
       avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face"
     }
   ];

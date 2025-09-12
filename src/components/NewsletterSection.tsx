@@ -13,90 +13,91 @@ const NewsletterSection = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-accent to-green-600">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center text-white">
-          {/* Main Content */}
-          <div className="mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              Join the Tea Club
-            </h2>
-            <p className="text-lg md:text-xl opacity-90 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Get exclusive access to new tea releases, expert brewing tips, special discounts, 
-              and become part of our growing community of tea enthusiasts.
-            </p>
-          </div>
-          
-          {/* Newsletter Form */}
-          <form onSubmit={handleSubmit} className="max-w-md mx-auto mb-8">
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Input
-                type="email"
-                placeholder="Enter your email address"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="flex-1 bg-white/10 border-white/20 text-white placeholder:text-white/70 focus:bg-white/20"
-              />
-              <Button 
-                type="submit"
-                className="bg-white text-accent hover:bg-gray-100 px-8 whitespace-nowrap"
-              >
-                Join Now
-              </Button>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Content */}
+          <div className="space-y-8">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-primary">
+                Join the RELEX Sleep Club
+              </h2>
+              <p className="text-lg md:text-xl text-primary/70 leading-relaxed">
+                Get exclusive access to new sleep support tea releases, expert brewing tips for better rest, 
+                and special discounts to help you sleep naturally.
+              </p>
             </div>
-          </form>
-          
-          {/* Benefits */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+            
+            {/* Newsletter Form */}
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Input
+                  type="email"
+                  placeholder="Enter your email address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  className="flex-1 border-primary/20 focus:border-primary"
+                />
+                <Button 
+                  type="submit"
+                  className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 whitespace-nowrap"
+                >
+                  Join Now
+                </Button>
+              </div>
+            </form>
+            
+            {/* Trust Indicators */}
+            <div className="flex flex-wrap items-center gap-8 text-primary/80">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary">50K+</div>
+                <div className="text-sm">Happy Sleepers</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary">5★</div>
+                <div className="text-sm">Newsletter Rating</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary">0</div>
+                <div className="text-sm">Spam Promise</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column - Benefits */}
+          <div className="space-y-6">
+            <div className="bg-secondary/10 p-6 rounded-2xl border border-secondary/20">
+              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                 <span className="text-2xl">📧</span>
               </div>
-              <h3 className="font-semibold mb-2">Exclusive Offers</h3>
-              <p className="text-sm opacity-80">Get first access to sales and member-only discounts</p>
+              <h3 className="font-semibold mb-2 text-primary">Exclusive Sleep Offers</h3>
+              <p className="text-sm text-primary/70">Get first access to sales and member-only discounts on sleep support teas</p>
             </div>
             
-            <div className="text-center">
-              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🍃</span>
+            <div className="bg-secondary/10 p-6 rounded-2xl border border-secondary/20">
+              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl">🌙</span>
               </div>
-              <h3 className="font-semibold mb-2">New Arrivals</h3>
-              <p className="text-sm opacity-80">Be the first to try our latest tea discoveries</p>
+              <h3 className="font-semibold mb-2 text-primary">New Sleep Blends</h3>
+              <p className="text-sm text-primary/70">Be the first to try our latest sleep support tea discoveries</p>
             </div>
             
-            <div className="text-center">
-              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="bg-secondary/10 p-6 rounded-2xl border border-secondary/20">
+              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                 <span className="text-2xl">📚</span>
               </div>
-              <h3 className="font-semibold mb-2">Expert Tips</h3>
-              <p className="text-sm opacity-80">Learn brewing techniques from our tea masters</p>
+              <h3 className="font-semibold mb-2 text-primary">Sleep Tips</h3>
+              <p className="text-sm text-primary/70">Learn bedtime brewing techniques from our sleep wellness experts</p>
             </div>
+            
+            {/* Fine Print */}
+            <p className="text-xs text-primary/60 mt-6">
+              We respect your privacy. Unsubscribe at any time. 
+              Read our <span className="underline cursor-pointer">Privacy Policy</span> and 
+              <span className="underline cursor-pointer"> Terms of Service</span>.
+            </p>
           </div>
-          
-          {/* Trust Indicators */}
-          <div className="flex flex-wrap items-center justify-center gap-8 opacity-80">
-            <div className="text-center">
-              <div className="text-2xl font-bold">50K+</div>
-              <div className="text-xs">Subscribers</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold">5★</div>
-              <div className="text-xs">Newsletter Rating</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold">0</div>
-              <div className="text-xs">Spam Promise</div>
-            </div>
-          </div>
-          
-          {/* Fine Print */}
-          <p className="text-xs opacity-70 mt-6">
-            We respect your privacy. Unsubscribe at any time. 
-            <br className="hidden sm:inline" />
-            Read our <span className="underline cursor-pointer">Privacy Policy</span> and 
-            <span className="underline cursor-pointer"> Terms of Service</span>.
-          </p>
         </div>
       </div>
     </section>

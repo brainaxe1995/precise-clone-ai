@@ -6,9 +6,9 @@
 
 @layer base {
   :root {
-    /* RELEX Brand Colors - Only Two Greens (from uploaded image) */
+    /* RELEX Brand Colors - Only Greens (no brown/yellow) */
     --background: 0 0% 100%;
-    --foreground: 31 69 40;
+    --foreground: 148 50% 20%;
     
     /* Primary Brand Colors - Dark Forest Green */
     --primary: 148 50% 20%;
