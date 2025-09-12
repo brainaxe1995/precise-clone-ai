@@ -20,7 +20,7 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         
-        /* Teapoz Brand Colors */
+        /* RLEX Brand Colors - Glass Green & Light Yellow */
         header: {
           DEFAULT: "hsl(var(--header-bg))",
           foreground: "hsl(var(--header-foreground))",
@@ -33,6 +33,11 @@ export default {
         about: {
           DEFAULT: "hsl(var(--about-bg))",
           foreground: "hsl(var(--about-foreground))",
+        },
+        glass: {
+          green: "rgba(34, 197, 94, 0.1)",
+          yellow: "rgba(254, 240, 138, 0.15)", 
+          white: "rgba(255, 255, 255, 0.1)",
         },
         
         primary: {
@@ -67,10 +72,21 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
       },
+      fontFamily: {
+        'heading': ['Playfair Display', 'serif'],
+        'body': ['Poppins', 'sans-serif'],
+      },
       borderRadius: {
         lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
+        md: "calc(var(--radius) - 2px)", 
         sm: "calc(var(--radius) - 4px)",
+      },
+      backdropBlur: {
+        'xs': '2px',
+        'sm': '4px',
+        'md': '12px',
+        'lg': '16px',
+        'xl': '24px',
       },
       keyframes: {
         "accordion-down": {

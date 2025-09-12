@@ -14,9 +14,15 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold mb-4">teapoz</h3>
+            <div className="flex items-center space-x-2 mb-4">
+              <div className="glass-green p-2 rounded-lg">
+                <span className="text-xl">🍃</span>
+              </div>
+              <h3 className="text-2xl font-heading font-bold">RLEX</h3>
+            </div>
             <p className="text-sm opacity-90 leading-relaxed mb-4">
-              We are a family-run company founded on a passion for tea. Our Chairman made a promise to never sell tea he wouldn't drink at home. Learn how we stay true to those values in everything we do.
+              Premium herbal teas designed to support natural relaxation and evening routines. 
+              Made with 100% organic ingredients for your wellness journey.
             </p>
             <div className="flex space-x-4">
               <Facebook className="h-5 w-5 cursor-pointer hover:text-accent transition-colors" />

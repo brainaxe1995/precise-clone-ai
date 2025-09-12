@@ -1,133 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Teapoz Design System - Tea Store Colors & Styles */
-
 @layer base {
   :root {
-    /* Teapoz Brand Colors */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 15%;
-
-    /* Header & Navigation */
-    --header-bg: 78 45% 16%;  /* Dark green #2d5016 */
-    --header-foreground: 0 0% 100%;
-    --nav-hover: 88 50% 53%;  /* Bright green accent */
-
-    /* Hero Section */
-    --hero-bg: 214 50% 15%;   /* Dark navy blue */
-    --hero-foreground: 0 0% 100%;
-    --hero-accent: 88 50% 53%; /* Bright green #8bc34a */
-
-    /* About Section */
-    --about-bg: 78 45% 16%;   /* Same dark green as header */
-    --about-foreground: 0 0% 100%;
-
-    /* Cards & Products */
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 15%;
-    --card-border: 0 0% 90%;
-
-    /* Buttons */
-    --button-primary: 0 0% 100%;
-    --button-primary-foreground: 0 0% 15%;
-    --button-primary-hover: 0 0% 95%;
-
-    --button-accent: 88 50% 53%;
-    --button-accent-foreground: 0 0% 100%;
-    --button-accent-hover: 88 50% 48%;
-
-    /* Utility Colors */
-    --primary: 78 45% 16%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 15%;
-
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
-
-    --accent: 88 50% 53%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 15%;
-
-    --border: 0 0% 90%;
-    --input: 0 0% 95%;
-    --ring: 88 50% 53%;
-
-    --radius: 0.375rem;
-
-    /* Gradients & Effects */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--hero-bg)), hsl(var(--hero-bg) / 0.8));
-    --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-    /* Sidebar variables for compatibility */
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Base colors */
+    --background: 255 255 255;
+    --foreground: 20 20 20;
+    
+    /* RLEX Brand - Glassy Transparent Green & Light Yellow */
+    --primary-green: 34 197 94; /* Vibrant green */
+    --primary-green-light: 134 239 172; /* Light green */
+    --primary-yellow: 254 240 138; /* Light yellow */
+    --primary-yellow-soft: 255 251 235; /* Very soft yellow */
+    
+    /* Glass effect colors with transparency */
+    --glass-green: 34 197 94; /* Primary green for glass */
+    --glass-yellow: 254 240 138; /* Primary yellow for glass */
+    --glass-white: 255 255 255; /* White for glass */
+    
+    /* Brand specific variables */
+    --header-bg: 34 197 94; /* Transparent green */
+    --header-foreground: 255 255 255;
+    
+    --hero-bg: 34 197 94; /* Green background */
+    --hero-foreground: 255 255 255;
+    --hero-accent: 254 240 138; /* Light yellow accent */
+    
+    --about-bg: 255 251 235; /* Very soft yellow */
+    --about-foreground: 20 20 20;
+    
+    /* UI colors */
+    --border: 229 229 229;
+    --input: 229 229 229;
+    --ring: 34 197 94;
+    --radius: 1rem;
+    
+    --primary: 34 197 94; /* Main green */
+    --primary-foreground: 255 255 255;
+    
+    --secondary: 255 251 235; /* Soft yellow */
+    --secondary-foreground: 20 20 20;
+    
+    --muted: 243 244 246;
+    --muted-foreground: 107 114 128;
+    
+    --accent: 254 240 138; /* Light yellow */
+    --accent-foreground: 20 20 20;
+    
+    --card: 255 255 255;
+    --card-foreground: 20 20 20;
+    --card-border: 229 229 229;
+    
+    --sidebar-background: 255 255 255;
+    --sidebar-foreground: 20 20 20;
+    --sidebar-primary: 34 197 94;
+    --sidebar-primary-foreground: 255 255 255;
+    --sidebar-accent: 254 240 138;
+    --sidebar-accent-foreground: 20 20 20;
+    --sidebar-border: 229 229 229;
+    --sidebar-ring: 34 197 94;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 17 24 39;
+    --foreground: 249 250 251;
     
-    --header-bg: 78 45% 12%;
-    --header-foreground: 0 0% 100%;
+    --header-bg: 17 24 39;
+    --header-foreground: 249 250 251;
     
-    --hero-bg: 214 50% 10%;
-    --hero-foreground: 0 0% 100%;
-    --hero-accent: 88 50% 58%;
+    --hero-bg: 17 24 39;
+    --hero-foreground: 249 250 251;
+    --hero-accent: 254 240 138;
     
-    --about-bg: 78 45% 12%;
-    --about-foreground: 0 0% 100%;
+    --about-bg: 31 41 55;
+    --about-foreground: 249 250 251;
     
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --card-border: 217.2 32.6% 17.5%;
+    --border: 55 65 81;
+    --input: 55 65 81;
+    --ring: 134 239 172;
     
-    --primary: 78 45% 20%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 134 239 172;
+    --primary-foreground: 17 24 39;
     
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 31 41 55;
+    --secondary-foreground: 249 250 251;
     
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 55 65 81;
+    --muted-foreground: 156 163 175;
     
-    --accent: 88 50% 58%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --accent: 254 240 138;
+    --accent-foreground: 17 24 39;
     
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 88 50% 58%;
-
-    /* Dark sidebar variables */
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --card: 31 41 55;
+    --card-foreground: 249 250 251;
+    --card-border: 55 65 81;
+    
+    --sidebar-background: 17 24 39;
+    --sidebar-foreground: 249 250 251;
+    --sidebar-primary: 134 239 172;
+    --sidebar-primary-foreground: 17 24 39;
+    --sidebar-accent: 75 85 99;
+    --sidebar-accent-foreground: 249 250 251;
+    --sidebar-border: 55 65 81;
+    --sidebar-ring: 134 239 172;
   }
 }
 
@@ -135,30 +113,68 @@
   * {
     @apply border-border;
   }
-
+  
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    @apply font-bold;
   }
 }
 
-/* Custom Components */
 @layer components {
+  /* Glass effect utilities */
+  .glass-green {
+    background: rgba(34, 197, 94, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+  }
+  
+  .glass-yellow {
+    background: rgba(254, 240, 138, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(254, 240, 138, 0.3);
+  }
+  
+  .glass-white {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Gradient backgrounds */
+  .gradient-green-yellow {
+    background: linear-gradient(135deg, 
+      rgba(34, 197, 94, 0.1) 0%, 
+      rgba(254, 240, 138, 0.1) 100%);
+  }
+  
+  .gradient-overlay {
+    background: linear-gradient(135deg, 
+      rgba(34, 197, 94, 0.8) 0%, 
+      rgba(34, 197, 94, 0.6) 100%);
+  }
+  
+  /* Hover animations */
   .hover-scale {
-    @apply transition-transform duration-200 hover:scale-105;
+    @apply transition-transform duration-300 hover:scale-105;
   }
   
-  .fade-in {
-    animation: fadeIn 0.3s ease-in-out;
+  .hover-glow {
+    @apply transition-all duration-300;
   }
   
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  .hover-glow:hover {
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
   }
 }
