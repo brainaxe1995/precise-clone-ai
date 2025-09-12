@@ -18,19 +18,19 @@ const FindRightTeaSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center text-white max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-            Find the right tea<br />
-            for you
+            Experience Natural<br />
+            Evening Wellness
           </h2>
           <p className="text-lg md:text-xl mb-8 opacity-90 leading-relaxed">
-            Take our quick quiz to discover your perfect tea match based on your taste preferences, 
-            health goals, and lifestyle. Get personalized recommendations from our tea experts.
+            Discover our premium herbal tea blends crafted with carefully selected natural ingredients. 
+            Join thousands who have made Relax Herbal Tea part of their nightly routine for better rest and relaxation.
           </p>
           
           <Button 
             size="lg" 
             className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-3 text-base font-medium"
           >
-            Take Tea Quiz
+            Shop Premium Blends
           </Button>
           
           {/* Additional Info */}
