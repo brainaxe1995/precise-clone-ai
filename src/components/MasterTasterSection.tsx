@@ -1,0 +1,100 @@
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import teaPackageImage from "@/assets/tea-package-green.jpg";
+
+const MasterTasterSection = () => {
+  return (
+    <section className="py-20 bg-gradient-to-r from-green-50 to-lime-50">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left - Product Image */}
+          <div className="relative">
+            <div className="bg-white rounded-2xl p-8 shadow-xl">
+              <Badge className="mb-4 bg-red-500 text-white">Limited Edition</Badge>
+              <img 
+                src={teaPackageImage} 
+                alt="Master Tea Tester Selection" 
+                className="w-full h-80 object-cover rounded-lg mb-6"
+              />
+              <div className="text-center">
+                <h3 className="text-2xl font-bold mb-2">Master Tea Tester Selections</h3>
+                <p className="text-gray-600 mb-4">Handpicked by our head tea master</p>
+                <div className="text-3xl font-bold text-accent mb-4">$24.99</div>
+                <Button className="w-full bg-accent hover:bg-accent/90">
+                  Add to Cart
+                </Button>
+              </div>
+            </div>
+            
+            {/* Floating Elements */}
+            <div className="absolute -top-4 -right-4 w-20 h-20 bg-accent rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">
+              Master<br/>Choice
+            </div>
+          </div>
+          
+          {/* Right - Content */}
+          <div className="space-y-6">
+            <div className="inline-block">
+              <Badge variant="outline" className="text-accent border-accent">
+                MASTER TEA TESTER
+              </Badge>
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+              Master Tea Tester<br />
+              Selections
+            </h2>
+            
+            <p className="text-lg text-gray-600 leading-relaxed">
+              Our Master Tea Tester, with over 30 years of experience, personally selects 
+              and curates these exceptional teas. Each selection represents the pinnacle 
+              of quality, flavor, and craftsmanship in the tea world.
+            </p>
+            
+            {/* Features */}
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-accent rounded-full"></div>
+                <span className="text-gray-700">Hand-selected premium tea leaves</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-accent rounded-full"></div>
+                <span className="text-gray-700">Limited seasonal availability</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-accent rounded-full"></div>
+                <span className="text-gray-700">Certified organic and fair trade</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-accent rounded-full"></div>
+                <span className="text-gray-700">Exclusive tasting notes included</span>
+              </div>
+            </div>
+            
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-6 pt-6 border-t border-gray-200">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-accent">30+</div>
+                <div className="text-sm text-gray-600">Years Experience</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-accent">500+</div>
+                <div className="text-sm text-gray-600">Teas Curated</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-accent">98%</div>
+                <div className="text-sm text-gray-600">Customer Satisfaction</div>
+              </div>
+            </div>
+            
+            <Button size="lg" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-white">
+              Learn More About Our Process
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default MasterTasterSection;
