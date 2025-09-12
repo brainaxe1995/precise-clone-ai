@@ -10,7 +10,7 @@ const Header = () => {
     <header className="bg-card sticky top-0 z-50 border-b border-border animate-fade-in">
       {/* Top Banner */}
       <div className="bg-primary text-primary-foreground text-center py-2 text-sm">
-        <p>🌿 Always free shipping | May Support Natural Sleep</p>
+        <p>🌿 Always free shipping | Premium Evening Wellness</p>
       </div>
       
       <div className="container mx-auto px-4">

@@ -23,7 +23,7 @@ const HeroSection = () => {
             </p>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading leading-tight mb-8 text-primary">
-              Natural Sleep Support with{' '}
+              Premium Evening Wellness with{' '}
               <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent font-bold">
                 RELEX Tea
               </span>
@@ -31,7 +31,7 @@ const HeroSection = () => {
             
             <p className="text-xl md:text-2xl mb-8 text-primary/70 leading-relaxed">
               Experience gentle relaxation with our premium herbal tea blend crafted in the USA. 
-              May help support your natural sleep routine and promote a calm, peaceful mind.
+              Perfect for your evening relaxation routine and peaceful moments.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -58,7 +58,7 @@ const HeroSection = () => {
               </div>
               <div className="text-center">
                 <div className="text-2xl mb-2">😌</div>
-                <p className="text-sm font-semibold text-primary">Sleep Support</p>
+                <p className="text-sm font-semibold text-primary">Evening Wellness</p>
               </div>
               <div className="text-center">
                 <div className="text-2xl mb-2">🚚</div>

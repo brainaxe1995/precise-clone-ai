@@ -36,7 +36,7 @@ const ProductTabs = () => {
       reviews: 288,
       image: "/api/placeholder/300/300",
       badge: "Premium",
-      benefits: ["Natural calming herbs", "Sleep routine support", "Premium quality"]
+      benefits: ["Natural calming herbs", "Evening routine support", "Premium quality"]
     },
     {
       id: 3,
@@ -67,7 +67,7 @@ const ProductTabs = () => {
       <div className="container mx-auto px-4">
         {/* Section Title */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-heading mb-8 text-center">Natural Sleep Support Collection</h2>
+          <h2 className="text-3xl md:text-4xl font-heading mb-8 text-center">Premium Evening Wellness Collection</h2>
           
           {/* Tabs */}
           <div className="flex flex-wrap justify-center gap-2 mb-8">
