@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,106 +6,80 @@
 
 @layer base {
   :root {
-    /* Base colors */
-    --background: 255 255 255;
-    --foreground: 20 20 20;
+    /* RLEX Brand Colors - Natural Green & Soft Yellow */
+    --background: 120 25% 96%;
+    --foreground: 142 71% 8%;
     
-    /* RLEX Brand - Glassy Transparent Green & Light Yellow */
-    --primary-green: 34 197 94; /* Vibrant green */
-    --primary-green-light: 134 239 172; /* Light green */
-    --primary-yellow: 254 240 138; /* Light yellow */
-    --primary-yellow-soft: 255 251 235; /* Very soft yellow */
+    /* Primary Brand Colors */
+    --primary: 142 71% 45%;
+    --primary-foreground: 0 0% 100%;
     
-    /* Glass effect colors with transparency */
-    --glass-green: 34 197 94; /* Primary green for glass */
-    --glass-yellow: 254 240 138; /* Primary yellow for glass */
-    --glass-white: 255 255 255; /* White for glass */
+    /* Secondary with minimal yellow accent */
+    --secondary: 244 63% 69%;
+    --secondary-foreground: 142 71% 8%;
     
-    /* Brand specific variables */
-    --header-bg: 34 197 94; /* Transparent green */
-    --header-foreground: 255 255 255;
+    /* Yellow accent (used sparingly - 10%) */
+    --accent: 48 96% 76%;
+    --accent-foreground: 142 71% 8%;
     
-    --hero-bg: 34 197 94; /* Green background */
-    --hero-foreground: 255 255 255;
-    --hero-accent: 254 240 138; /* Light yellow accent */
-    
-    --about-bg: 255 251 235; /* Very soft yellow */
-    --about-foreground: 20 20 20;
+    /* Muted colors */
+    --muted: 120 25% 94%;
+    --muted-foreground: 142 27% 23%;
     
     /* UI colors */
-    --border: 229 229 229;
-    --input: 229 229 229;
-    --ring: 34 197 94;
-    --radius: 1rem;
+    --border: 120 25% 88%;
+    --input: 120 25% 88%;
+    --ring: 142 71% 45%;
+    --radius: 0.75rem;
     
-    --primary: 34 197 94; /* Main green */
-    --primary-foreground: 255 255 255;
+    /* Card colors */
+    --card: 0 0% 100%;
+    --card-foreground: 142 71% 8%;
+    --card-border: 120 25% 88%;
     
-    --secondary: 255 251 235; /* Soft yellow */
-    --secondary-foreground: 20 20 20;
-    
-    --muted: 243 244 246;
-    --muted-foreground: 107 114 128;
-    
-    --accent: 254 240 138; /* Light yellow */
-    --accent-foreground: 20 20 20;
-    
-    --card: 255 255 255;
-    --card-foreground: 20 20 20;
-    --card-border: 229 229 229;
-    
-    --sidebar-background: 255 255 255;
-    --sidebar-foreground: 20 20 20;
-    --sidebar-primary: 34 197 94;
-    --sidebar-primary-foreground: 255 255 255;
-    --sidebar-accent: 254 240 138;
-    --sidebar-accent-foreground: 20 20 20;
-    --sidebar-border: 229 229 229;
-    --sidebar-ring: 34 197 94;
+    /* Sidebar colors */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 142 71% 8%;
+    --sidebar-primary: 142 71% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 48 96% 76%;
+    --sidebar-accent-foreground: 142 71% 8%;
+    --sidebar-border: 120 25% 88%;
+    --sidebar-ring: 142 71% 45%;
   }
 
   .dark {
-    --background: 17 24 39;
-    --foreground: 249 250 251;
+    --background: 142 84% 2%;
+    --foreground: 120 25% 96%;
     
-    --header-bg: 17 24 39;
-    --header-foreground: 249 250 251;
+    --primary: 142 71% 55%;
+    --primary-foreground: 142 84% 2%;
     
-    --hero-bg: 17 24 39;
-    --hero-foreground: 249 250 251;
-    --hero-accent: 254 240 138;
+    --secondary: 142 30% 10%;
+    --secondary-foreground: 120 25% 96%;
     
-    --about-bg: 31 41 55;
-    --about-foreground: 249 250 251;
+    --accent: 48 96% 76%;
+    --accent-foreground: 142 84% 2%;
     
-    --border: 55 65 81;
-    --input: 55 65 81;
-    --ring: 134 239 172;
+    --muted: 142 30% 10%;
+    --muted-foreground: 142 27% 77%;
     
-    --primary: 134 239 172;
-    --primary-foreground: 17 24 39;
+    --border: 142 30% 18%;
+    --input: 142 30% 18%;
+    --ring: 142 71% 55%;
     
-    --secondary: 31 41 55;
-    --secondary-foreground: 249 250 251;
+    --card: 142 30% 10%;
+    --card-foreground: 120 25% 96%;
+    --card-border: 142 30% 18%;
     
-    --muted: 55 65 81;
-    --muted-foreground: 156 163 175;
-    
-    --accent: 254 240 138;
-    --accent-foreground: 17 24 39;
-    
-    --card: 31 41 55;
-    --card-foreground: 249 250 251;
-    --card-border: 55 65 81;
-    
-    --sidebar-background: 17 24 39;
-    --sidebar-foreground: 249 250 251;
-    --sidebar-primary: 134 239 172;
-    --sidebar-primary-foreground: 17 24 39;
-    --sidebar-accent: 75 85 99;
-    --sidebar-accent-foreground: 249 250 251;
-    --sidebar-border: 55 65 81;
-    --sidebar-ring: 134 239 172;
+    --sidebar-background: 142 84% 2%;
+    --sidebar-foreground: 120 25% 96%;
+    --sidebar-primary: 142 71% 55%;
+    --sidebar-primary-foreground: 142 84% 2%;
+    --sidebar-accent: 142 30% 18%;
+    --sidebar-accent-foreground: 120 25% 96%;
+    --sidebar-border: 142 30% 18%;
+    --sidebar-ring: 142 71% 55%;
   }
 }
 
@@ -116,65 +90,86 @@
   
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Merriweather', serif;
     @apply font-bold;
   }
 }
 
 @layer components {
-  /* Glass effect utilities */
-  .glass-green {
-    background: rgba(34, 197, 94, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(34, 197, 94, 0.2);
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
   }
   
-  .glass-yellow {
-    background: rgba(254, 240, 138, 0.15);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(254, 240, 138, 0.3);
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out forwards;
   }
   
-  .glass-white {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
   }
   
-  .glass-card {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-lg;
   }
   
-  /* Gradient backgrounds */
-  .gradient-green-yellow {
-    background: linear-gradient(135deg, 
-      rgba(34, 197, 94, 0.1) 0%, 
-      rgba(254, 240, 138, 0.1) 100%);
+  .scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
   }
   
-  .gradient-overlay {
-    background: linear-gradient(135deg, 
-      rgba(34, 197, 94, 0.8) 0%, 
-      rgba(34, 197, 94, 0.6) 100%);
+  .scroll-animate.in-view {
+    opacity: 1;
+    transform: translateY(0);
   }
   
-  /* Hover animations */
-  .hover-scale {
-    @apply transition-transform duration-300 hover:scale-105;
+  /* Professional scroll effects */
+  .parallax-scroll {
+    will-change: transform;
   }
   
-  .hover-glow {
-    @apply transition-all duration-300;
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
-  
-  .hover-glow:hover {
-    box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }

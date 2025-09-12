@@ -6,17 +6,17 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="glass-white sticky top-0 z-50 border-b border-white/20">
+    <header className="bg-card sticky top-0 z-50 border-b border-border animate-fade-in">
       {/* Top Banner */}
       <div className="bg-primary text-primary-foreground text-center py-2 text-sm">
-        <p>🌿 Free shipping on orders over $50 | Natural Sleep Support</p>
+        <p>🌿 Free shipping on orders over $50 | May Support Natural Sleep</p>
       </div>
       
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="glass-green p-2 rounded-lg">
+          <div className="flex items-center space-x-3">
+            <div className="bg-primary/10 p-2 rounded-lg">
               <span className="text-2xl">🍃</span>
             </div>
             <h1 className="text-2xl font-heading font-bold text-primary">RLEX</h1>
@@ -25,18 +25,18 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <a href="/" className="text-sm font-medium hover:text-primary transition-colors">Home</a>
-            <a href="#shop" className="text-sm font-medium hover:text-primary transition-colors">Shop Now</a>
-            <a href="#about" className="text-sm font-medium hover:text-primary transition-colors">About</a>
-            <a href="#blog" className="text-sm font-medium hover:text-primary transition-colors">Blog</a>
-            <a href="#contact" className="text-sm font-medium hover:text-primary transition-colors">Contact</a>
+            <a href="/shop" className="text-sm font-medium hover:text-primary transition-colors">Shop Now</a>
+            <a href="/about" className="text-sm font-medium hover:text-primary transition-colors">About</a>
+            <a href="/contact" className="text-sm font-medium hover:text-primary transition-colors">Contact</a>
+            <a href="/faq" className="text-sm font-medium hover:text-primary transition-colors">FAQ</a>
           </nav>
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" size="sm" className="glass-green">
+            <Button variant="ghost" size="sm" className="bg-muted">
               <Search className="h-4 w-4" />
             </Button>
-            <Button variant="ghost" size="sm" className="glass-green">
+            <Button variant="ghost" size="sm" className="bg-muted">
               <User className="h-4 w-4" />
             </Button>
             <Button variant="default" size="sm" className="bg-primary hover:bg-primary/90">
@@ -58,19 +58,19 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden glass-white border-t border-white/20">
+          <div className="md:hidden bg-card border-t border-border animate-slide-up">
             <nav className="flex flex-col space-y-4 py-6">
               <a href="/" className="text-sm font-medium hover:text-primary transition-colors">Home</a>
-              <a href="#shop" className="text-sm font-medium hover:text-primary transition-colors">Shop Now</a>
-              <a href="#about" className="text-sm font-medium hover:text-primary transition-colors">About</a>
-              <a href="#blog" className="text-sm font-medium hover:text-primary transition-colors">Blog</a>
-              <a href="#contact" className="text-sm font-medium hover:text-primary transition-colors">Contact</a>
-              <div className="flex flex-col space-y-3 pt-4 border-t border-white/20">
-                <Button variant="ghost" className="justify-start glass-green">
+              <a href="/shop" className="text-sm font-medium hover:text-primary transition-colors">Shop Now</a>
+              <a href="/about" className="text-sm font-medium hover:text-primary transition-colors">About</a>
+              <a href="/contact" className="text-sm font-medium hover:text-primary transition-colors">Contact</a>
+              <a href="/faq" className="text-sm font-medium hover:text-primary transition-colors">FAQ</a>
+              <div className="flex flex-col space-y-3 pt-4 border-t border-border">
+                <Button variant="ghost" className="justify-start bg-muted">
                   <Search className="h-4 w-4 mr-2" />
                   Search
                 </Button>
-                <Button variant="ghost" className="justify-start glass-green">
+                <Button variant="ghost" className="justify-start bg-muted">
                   <User className="h-4 w-4 mr-2" />
                   Account
                 </Button>
