@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Statement - RELAX Tea</title>
+    <meta name="description" content="RELAX Tea's commitment to digital accessibility and making our website usable for everyone.">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section style="padding: 5rem 0;">
+            <div class="container" style="max-width: 64rem;">
+                <h1 style="font-size: 2.5rem; font-family: 'Playfair Display', serif; margin-bottom: 2rem; color: var(--primary);">
+                    Accessibility Statement
+                </h1>
+                
+                <div style="display: flex; flex-direction: column; gap: 2rem;">
+                    <section>
+                        <h2 style="font-size: 1.5rem; font-family: 'Playfair Display', serif; margin-bottom: 1rem; color: var(--foreground);">Our Commitment</h2>
+                        <p style="color: var(--muted-foreground); line-height: 1.6;">
+                            RELAX Tea is committed to ensuring digital accessibility for people with disabilities. We are continually 
+                            improving the user experience for everyone and applying the relevant accessibility standards to ensure 
+                            we provide equal access to all users.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 style="font-size: 1.5rem; font-family: 'Playfair Display', serif; margin-bottom: 1rem; color: var(--foreground);">Conformance Status</h2>
+                        <p style="color: var(--muted-foreground); line-height: 1.6;">
+                            We strive to conform to the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA standards. 
+                            These guidelines explain how to make web content more accessible for people with disabilities and 
+                            user-friendly for everyone.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 style="font-size: 1.5rem; font-family: 'Playfair Display', serif; margin-bottom: 1rem; color: var(--foreground);">Accessibility Features</h2>
+                        <p style="margin-bottom: 1rem;">Our website includes the following accessibility features:</p>
+                        <ul style="list-style-type: disc; padding-left: 1.5rem; color: var(--muted-foreground); line-height: 1.8;">
+                            <li>Clear navigation structure and headings</li>
+                            <li>Descriptive alt text for images</li>
+                            <li>Keyboard navigation support</li>
+                            <li>High contrast color scheme options</li>
+                            <li>Readable fonts and appropriate text sizes</li>
+                            <li>Form labels and error messages</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 style="font-size: 1.5rem; font-family: 'Playfair Display', serif; margin-bottom: 1rem; color: var(--foreground);">Feedback</h2>
+                        <p style="color: var(--muted-foreground); line-height: 1.6; margin-bottom: 1rem;">
+                            We welcome your feedback on the accessibility of our website. Please let us know if you encounter 
+                            accessibility barriers or have suggestions for improvement.
+                        </p>
+                        <p style="color: var(--muted-foreground); line-height: 1.6;">
+                            Contact us at:<br>
+                            Email: accessibility@relax-tea.com<br>
+                            Phone: 1-800-RELAX-TEA<br>
+                            We aim to respond to accessibility feedback within 5 business days.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 style="font-size: 1.5rem; font-family: 'Playfair Display', serif; margin-bottom: 1rem; color: var(--foreground);">Technical Specifications</h2>
+                        <p style="color: var(--muted-foreground); line-height: 1.6;">
+                            Accessibility of our website relies on the following technologies to work with the particular 
+                            combination of web browser and any assistive technologies or plugins installed on your computer:
+                        </p>
+                        <ul style="list-style-type: disc; padding-left: 1.5rem; color: var(--muted-foreground); line-height: 1.8; margin-top: 1rem;">
+                            <li>HTML</li>
+                            <li>WAI-ARIA</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 style="font-size: 1.5rem; font-family: 'Playfair Display', serif; margin-bottom: 1rem; color: var(--foreground);">Assessment Approach</h2>
+                        <p style="color: var(--muted-foreground); line-height: 1.6;">
+                            RELAX Tea assessed the accessibility of our website through self-evaluation and is committed to 
+                            ongoing monitoring and improvement. We regularly review our website for accessibility issues and 
+                            work to address any problems identified.
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/main.js"></script>
+    <script>
+        fetch('includes/header.html').then(response => response.text()).then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+        fetch('includes/footer.html').then(response => response.text()).then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - RELAX Tea</title>
+    <meta name="description" content="Terms of Service for RELAX Tea. Read our policies on product information, orders, shipping, returns, and more.">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section style="padding: 5rem 0;">
+            <div class="container" style="max-width: 64rem;">
+                <h1 style="font-size: 2.5rem; font-family: 'Playfair Display', serif; margin-bottom: 2rem;">Terms of Service</h1>
+                <p style="font-size: 0.875rem; color: var(--muted-foreground); margin-bottom: 2rem;">
+                    Last updated: <script>document.write(new Date().toLocaleDateString())</script>
+                </p>
+                
+                <div style="display: flex; flex-direction: column; gap: 2rem;">
+                    <section>
+                        <h2 style="font-size: 1.5rem; font-family: 'Playfair Display', serif; margin-bottom: 1rem;">Acceptance of Terms</h2>
+                        <p style="color: var(--muted-foreground); line-height: 1.6;">
+                            By accessing and using the RELAX website and purchasing our products, you accept and agree 
+                            to be bound by the terms and provision of this agreement.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 style="font-size: 1.5rem; font-family: 'Playfair Display', serif; margin-bottom: 1rem;">Product Information</h2>
+                        <p style="color: var(--muted-foreground); line-height: 1.6; margin-bottom: 1rem;">
+                            RELAX herbal teas are dietary supplements intended to support relaxation and may help 
+                            with evening routines. Our products are not intended to diagnose, treat, cure, or 
+                            prevent any disease.
+                        </p>
+                        <div style="background-color: #fef3cd; border: 1px solid #fecaca; border-radius: 0.5rem; padding: 1rem;">
+                            <p style="font-size: 0.875rem; color: #92400e;">
+                                <strong>Important:</strong> Results may vary. Consult your healthcare provider before 
+                                use if you are pregnant, nursing, have medical conditions, or take medications.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 style="font-size: 1.5rem; font-family: 'Playfair Display', serif; margin-bottom: 1rem;">Orders and Payment</h2>
+                        <ul style="list-style-type: disc; padding-left: 1.5rem; color: var(--muted-foreground); line-height: 1.8;">
+                            <li>All orders are subject to acceptance and availability</li>
+                            <li>Prices are subject to change without notice</li>
+                            <li>Payment must be received before shipment</li>
+                            <li>We accept major credit cards and PayPal</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 style="font-size: 1.5rem; font-family: 'Playfair Display', serif; margin-bottom: 1rem;">Shipping and Delivery</h2>
+                        <p style="color: var(--muted-foreground); line-height: 1.6; margin-bottom: 1rem;">
+                            We ship within the United States. Delivery times may vary based on location and shipping method selected.
+                        </p>
+                        <ul style="list-style-type: disc; padding-left: 1.5rem; color: var(--muted-foreground); line-height: 1.8;">
+                            <li>Standard shipping: 5-7 business days</li>
+                            <li>Express shipping: 2-3 business days</li>
+                            <li>Free shipping on orders over $50</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 style="font-size: 1.5rem; font-family: 'Playfair Display', serif; margin-bottom: 1rem;">Return Policy</h2>
+                        <p style="color: var(--muted-foreground); line-height: 1.6;">
+                            We offer a 30-day money-back guarantee. If you're not satisfied with your purchase, 
+                            contact us within 30 days of delivery for a full refund.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 style="font-size: 1.5rem; font-family: 'Playfair Display', serif; margin-bottom: 1rem;">Limitation of Liability</h2>
+                        <p style="color: var(--muted-foreground); line-height: 1.6;">
+                            RELAX shall not be liable for any direct, indirect, incidental, special, or consequential 
+                            damages resulting from the use or inability to use our products or website.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 style="font-size: 1.5rem; font-family: 'Playfair Display', serif; margin-bottom: 1rem;">Contact Information</h2>
+                        <p style="color: var(--muted-foreground); line-height: 1.6;">
+                            Questions about these Terms of Service should be sent to us at:<br>
+                            Email: legal@relax-tea.com<br>
+                            Phone: 1-800-RELAX-TEA
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/main.js"></script>
+    <script>
+        fetch('includes/header.html').then(response => response.text()).then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+        fetch('includes/footer.html').then(response => response.text()).then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+</body>
+</html>
