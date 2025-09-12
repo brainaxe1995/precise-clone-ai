@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About RELAX - Premium Herbal Tea Story | Natural Evening Wellness</title>
+    <meta name="description" content="Learn about RELAX Tea's commitment to natural wellness through premium herbal teas. Our story, values, and team dedicated to supporting your relaxation routine.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Variables and Base Styles */
+        :root {
+            --background: hsl(0, 0%, 100%);
+            --foreground: hsl(148, 50%, 20%);
+            --primary: hsl(148, 50%, 20%);
+            --primary-foreground: hsl(0, 0%, 100%);
+            --secondary: hsl(80, 35%, 55%);
+            --secondary-foreground: hsl(148, 50%, 20%);
+            --accent: hsl(80, 35%, 55%);
+            --accent-foreground: hsl(148, 50%, 20%);
+            --muted: hsl(120, 25%, 94%);
+            --muted-foreground: hsl(142, 27%, 23%);
+            --border: hsl(120, 25%, 88%);
+            --input: hsl(120, 25%, 88%);
+            --ring: hsl(142, 71%, 45%);
+            --radius: 0.75rem;
+            --card: hsl(0, 0%, 100%);
+            --card-foreground: hsl(142, 71%, 8%);
+            --card-border: hsl(120, 25%, 88%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border-color: var(--border);
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background);
+            color: var(--foreground);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius);
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 0.875rem;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+        }
+        
+        .btn-primary:hover {
+            background-color: hsl(148, 50%, 18%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn-lg {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+        }
+        
+        .card {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Header styles */
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .top-banner {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--primary-foreground);
+            text-align: center;
+            padding: 0.5rem;
+            font-size: 0.875rem;
+        }
+        
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--foreground);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .cart-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .cart-btn:hover {
+            background-color: hsl(148, 50%, 18%);
+            transform: translateY(-2px);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .mobile-nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: var(--background);
+            border-top: 1px solid var(--border);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .mobile-nav.open {
+            display: block;
+        }
+        
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            gap: 1rem;
+            list-style: none;
+        }
+        
+        .mobile-nav-links a {
+            text-decoration: none;
+            color: var(--foreground);
+            font-weight: 500;
+            padding: 0.75rem;
+            border-radius: var(--radius);
+            transition: background-color 0.3s ease;
+        }
+        
+        .mobile-nav-links a:hover {
+            background-color: var(--muted);
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--muted);
+            padding: 3rem 0 1rem;
+            margin-top: 5rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+            color: var(--foreground);
+        }
+        
+        .footer-section a {
+            display: block;
+            color: var(--muted-foreground);
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section a:hover {
+            color: var(--primary);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid var(--border);
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--muted-foreground);
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .grid-2 {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!-- Header -->
+        <header class="header">
+            <div class="top-banner">
+                <p>📦 FREE shipping on orders $50+ • 🌿 100% Organic • ⭐ 30-day guarantee</p>
+            </div>
+            <div class="container">
+                <nav class="nav">
+                    <a href="index.html" class="logo">RELAX</a>
+                    
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop Now</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                    
+                    <a href="shop.html" class="cart-btn">
+                        🛒 Cart
+                    </a>
+                    
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+                </nav>
+                
+                <div class="mobile-nav" id="mobileNav">
+                    <ul class="mobile-nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop Now</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="shop.html" class="cart-btn">🛒 Cart</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero" style="padding: 5rem 0; background: linear-gradient(135deg, rgba(148, 50, 20, 0.1), rgba(80, 35, 55, 0.1)); text-align: center;">
+            <div class="container">
+                <h1 style="font-size: 4rem; margin-bottom: 1.5rem;">
+                    About <span style="color: var(--primary);">RELAX</span>
+                </h1>
+                <p style="font-size: 1.25rem; color: var(--muted-foreground); max-width: 800px; margin: 0 auto; line-height: 1.7;">
+                    We're dedicated to promoting natural wellness through premium herbal teas 
+                    that may help support your relaxation and evening routines.
+                </p>
+            </div>
+        </section>
+
+        <!-- Our Story -->
+        <section style="padding: 5rem 0;">
+            <div class="container">
+                <div class="grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+                    <div>
+                        <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Our Story</h2>
+                        <p style="color: var(--muted-foreground); margin-bottom: 1.5rem; line-height: 1.7;">
+                            Founded with a passion for natural wellness, RELAX was created to provide 
+                            high-quality herbal teas that support healthy sleep routines without making 
+                            unrealistic promises.
+                        </p>
+                        <p style="color: var(--muted-foreground); margin-bottom: 2rem; line-height: 1.7;">
+                            Our carefully curated blends use only the finest organic ingredients, 
+                            sourced responsibly from trusted growers around the world. Each cup 
+                            represents our commitment to quality and your wellbeing.
+                        </p>
+                        <a href="shop.html" class="btn btn-primary">
+                            Shop Our Collection
+                        </a>
+                    </div>
+                    <div class="card" style="padding: 2rem; border-radius: 1rem;">
+                        <div style="aspect-ratio: 1; background: linear-gradient(135deg, rgba(148, 50, 20, 0.1), rgba(80, 35, 55, 0.1)); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center;">
+                            <span style="font-size: 8rem;">🍃</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values -->
+        <section style="padding: 5rem 0; background: rgba(254, 252, 232, 0.5);">
+            <div class="container">
+                <div style="text-center; margin-bottom: 4rem;">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Our Values</h2>
+                    <p style="color: var(--muted-foreground); max-width: 600px; margin: 0 auto;">
+                        These core principles guide everything we do at RELAX.
+                    </p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                    <div class="card">
+                        <div style="background: rgba(148, 50, 20, 0.1); padding: 1rem; border-radius: 50%; display: inline-flex; margin-bottom: 1rem;">
+                            <span style="font-size: 2rem; color: var(--primary);">🌿</span>
+                        </div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Natural Ingredients</h3>
+                        <p style="font-size: 0.875rem; color: var(--muted-foreground);">
+                            100% organic herbs sourced from sustainable farms
+                        </p>
+                    </div>
+                    
+                    <div class="card">
+                        <div style="background: rgba(148, 50, 20, 0.1); padding: 1rem; border-radius: 50%; display: inline-flex; margin-bottom: 1rem;">
+                            <span style="font-size: 2rem; color: var(--primary);">❤️</span>
+                        </div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Wellness Focus</h3>
+                        <p style="font-size: 0.875rem; color: var(--muted-foreground);">
+                            Supporting your natural relaxation and sleep routines
+                        </p>
+                    </div>
+                    
+                    <div class="card">
+                        <div style="background: rgba(148, 50, 20, 0.1); padding: 1rem; border-radius: 50%; display: inline-flex; margin-bottom: 1rem;">
+                            <span style="font-size: 2rem; color: var(--primary);">🛡️</span>
+                        </div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Quality Assurance</h3>
+                        <p style="font-size: 0.875rem; color: var(--muted-foreground);">
+                            Rigorous testing ensures every batch meets our standards
+                        </p>
+                    </div>
+                    
+                    <div class="card">
+                        <div style="background: rgba(148, 50, 20, 0.1); padding: 1rem; border-radius: 50%; display: inline-flex; margin-bottom: 1rem;">
+                            <span style="font-size: 2rem; color: var(--primary);">🏆</span>
+                        </div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Customer Satisfaction</h3>
+                        <p style="font-size: 0.875rem; color: var(--muted-foreground);">
+                            30-day money-back guarantee on all products
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team -->
+        <section style="padding: 5rem 0;">
+            <div class="container">
+                <div style="text-center; margin-bottom: 4rem;">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Meet Our Team</h2>
+                    <p style="color: var(--muted-foreground); max-width: 600px; margin: 0 auto;">
+                        Passionate experts dedicated to bringing you the finest herbal teas.
+                    </p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div class="card">
+                        <div style="width: 6rem; height: 6rem; background: linear-gradient(135deg, rgba(148, 50, 20, 0.1), rgba(80, 35, 55, 0.1)); border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center;">
+                            <span style="font-size: 3rem;">👤</span>
+                        </div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Sarah Johnson</h3>
+                        <p style="color: var(--primary); font-weight: 500; margin-bottom: 0.75rem;">Founder & Tea Expert</p>
+                        <p style="font-size: 0.875rem; color: var(--muted-foreground);">20+ years in herbal wellness and sustainable sourcing</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div style="width: 6rem; height: 6rem; background: linear-gradient(135deg, rgba(148, 50, 20, 0.1), rgba(80, 35, 55, 0.1)); border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center;">
+                            <span style="font-size: 3rem;">👤</span>
+                        </div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Michael Chen</h3>
+                        <p style="color: var(--primary); font-weight: 500; margin-bottom: 0.75rem;">Quality Assurance Manager</p>
+                        <p style="font-size: 0.875rem; color: var(--muted-foreground);">Ensures every batch meets our rigorous quality standards</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div style="width: 6rem; height: 6rem; background: linear-gradient(135deg, rgba(148, 50, 20, 0.1), rgba(80, 35, 55, 0.1)); border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center;">
+                            <span style="font-size: 3rem;">👤</span>
+                        </div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Emma Rodriguez</h3>
+                        <p style="color: var(--primary); font-weight: 500; margin-bottom: 0.75rem;">Customer Experience Lead</p>
+                        <p style="font-size: 0.875rem; color: var(--muted-foreground);">Dedicated to making your RELAX journey exceptional</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section style="padding: 5rem 0; background: rgba(80, 35, 55, 0.1); text-align: center;">
+            <div class="container">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">
+                    Ready to Experience RELAX?
+                </h2>
+                <p style="color: var(--muted-foreground); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Join thousands of customers who trust RELAX for their evening relaxation routine.
+                </p>
+                <a href="shop.html" class="btn btn-primary btn-lg">
+                    Shop Now
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>RELAX</h3>
+                        <p style="color: var(--muted-foreground); margin-bottom: 1rem;">
+                            Premium herbal teas for natural evening wellness. Made with organic ingredients to support your relaxation routine.
+                        </p>
+                        <div style="display: flex; gap: 1rem;">
+                            <a href="#" style="font-size: 1.5rem;">📧</a>
+                            <a href="#" style="font-size: 1.5rem;">📘</a>
+                            <a href="#" style="font-size: 1.5rem;">📷</a>
+                            <a href="#" style="font-size: 1.5rem;">🐦</a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h3>Quick Links</h3>
+                        <a href="index.html">Home</a>
+                        <a href="shop.html">Shop</a>
+                        <a href="about.html">About Us</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="faq.html">FAQ</a>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h3>Customer Service</h3>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="terms.html">Shipping Info</a>
+                        <a href="terms.html">Returns</a>
+                        <a href="accessibility.html">Accessibility</a>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h3>Contact Info</h3>
+                        <p style="color: var(--muted-foreground); margin-bottom: 0.5rem;">📧 info@relax-tea.com</p>
+                        <p style="color: var(--muted-foreground); margin-bottom: 0.5rem;">📞 1-800-RELAX-TEA</p>
+                        <p style="color: var(--muted-foreground); margin-bottom: 1rem;">📍 Portland, Oregon, USA</p>
+                        <p style="color: var(--muted-foreground); font-size: 0.875rem;">
+                            Monday - Friday: 9 AM - 6 PM PST<br>
+                            Saturday: 10 AM - 4 PM PST<br>
+                            Sunday: Closed
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                        <p>&copy; 2024 RELAX. All rights reserved.</p>
+                        <div style="display: flex; gap: 2rem;">
+                            <a href="privacy.html">Privacy Policy</a>
+                            <a href="terms.html">Terms of Service</a>
+                            <a href="cookies.html">Cookie Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            const btn = document.querySelector('.mobile-menu-btn');
+            
+            if (mobileNav.classList.contains('open')) {
+                mobileNav.classList.remove('open');
+                btn.textContent = '☰';
+            } else {
+                mobileNav.classList.add('open');
+                btn.textContent = '✕';
+            }
+        }
+
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const mobileNav = document.getElementById('mobileNav');
+                const btn = document.querySelector('.mobile-menu-btn');
+                mobileNav.classList.remove('open');
+                btn.textContent = '☰';
+            });
+        });
+    </script>
+</body>
+</html>
