@@ -5,13 +5,11 @@ import { Badge } from "@/components/ui/badge";
 import { Heart, Eye, RotateCcw, Star } from "lucide-react";
 
 const ProductTabs = () => {
-  const [activeTab, setActiveTab] = useState("new-in");
 
   const tabs = [
-    { id: "new-in", label: "New In" },
-    { id: "bestsellers", label: "Bestsellers" },
-    { id: "herbal", label: "Herbal" },
-    { id: "premium", label: "Premium" }
+    { id: "new-in", label: "New-In" },
+    { id: "best-seller", label: "Best Seller" },
+    { id: "most-popular", label: "Most Popular" },
   ];
 
   const products = [
