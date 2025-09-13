@@ -22,8 +22,8 @@ const ExquisiteTasteSection = () => {
                 <div className="text-sm text-gray-600 font-semibold">New Brand</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-accent">🇺🇸</div>
-                <div className="text-sm text-gray-600 font-semibold">Made in USA</div>
+                <div className="text-3xl font-bold text-accent">🇪🇺</div>
+                <div className="text-sm text-gray-600 font-semibold">Quality from Europe</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-accent">🌿</div>
