@@ -51,31 +51,33 @@ const Shop = () => {
       <Header />
       
       {/* Page Header */}
-      <section className="py-16 text-center">
+      <section className="py-20 text-center animate-fade-in">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-6xl font-heading mb-6">
-            Natural Evening Wellness with <span className="text-primary">RELAX Tea</span>
-          </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Discover our collection of premium herbal teas crafted in the USA to support your relaxation and evening routine.
-          </p>
+          <div className="animate-slide-up">
+            <h1 className="text-5xl md:text-7xl font-heading font-bold mb-8 animate-fade-in">
+              Natural Evening Wellness with <span className="gradient-text">RELAX Tea</span>
+            </h1>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-slide-up">
+              Discover our collection of premium herbal teas crafted in the USA to support your relaxation and evening routine.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Filters */}
-      <section className="py-8 border-b">
+      <section className="py-10 border-b animate-slide-up">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-muted-foreground">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <p className="text-base text-muted-foreground">
               Showing {products.length} products
             </p>
-            <div className="flex gap-3">
-              <Button variant="outline" className="glass-white">
-                <Filter className="h-4 w-4 mr-2" />
+            <div className="flex gap-4">
+              <Button variant="outline" className="glass-white font-semibold hover-lift">
+                <Filter className="h-5 w-5 mr-2" />
                 Filter
               </Button>
-              <Button variant="outline" className="glass-white">
-                <SlidersHorizontal className="h-4 w-4 mr-2" />
+              <Button variant="outline" className="glass-white font-semibold hover-lift">
+                <SlidersHorizontal className="h-5 w-5 mr-2" />
                 Sort by
               </Button>
             </div>
@@ -84,32 +86,33 @@ const Shop = () => {
       </section>
 
       {/* Products Grid */}
-      <section className="py-16">
+      <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <h2 className="text-4xl font-heading font-bold text-center mb-12 animate-fade-in">Our Premium Collection</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
             {products.map((product) => (
-              <Card key={product.id} className="glass-card hover-scale overflow-hidden">
+              <Card key={product.id} className="glass-card hover-scale overflow-hidden border-2 border-card-border hover:border-primary hover:shadow-2xl transition-all duration-500">
                 {product.badge && (
-                  <Badge className="absolute top-4 left-4 z-10 bg-primary text-primary-foreground">
+                  <Badge className="absolute top-4 left-4 z-10 bg-primary text-primary-foreground text-sm px-3 py-1 font-semibold shadow-lg">
                     {product.badge}
                   </Badge>
                 )}
                 
-                <div className="aspect-square bg-white p-4 flex items-center justify-center">
+                <div className="aspect-square bg-white p-6 flex items-center justify-center">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
                 
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-2 mb-2">
+                <CardContent className="p-8">
+                  <div className="flex items-center gap-2 mb-4">
                     <div className="flex items-center">
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
-                          className={`h-4 w-4 ${
+                          className={`h-5 w-5 ${
                             i < Math.floor(product.rating)
                               ? 'fill-yellow-400 text-yellow-400'
                               : 'text-gray-300'
@@ -117,33 +120,33 @@ const Shop = () => {
                         />
                       ))}
                     </div>
-                    <span className="text-sm text-muted-foreground">
+                    <span className="text-base text-muted-foreground">
                       ({product.reviews})
                     </span>
                   </div>
                   
-                  <h3 className="font-heading text-lg font-semibold mb-2">
+                  <h3 className="font-heading text-2xl font-semibold mb-4">
                     {product.name}
                   </h3>
                   
-                  <p className="text-sm text-muted-foreground mb-4">
+                  <p className="text-base text-muted-foreground mb-6 leading-relaxed">
                     {product.description}
                   </p>
                   
-                  <div className="flex flex-wrap gap-1 mb-4">
+                  <div className="flex flex-wrap gap-2 mb-6">
                     {product.benefits.map((benefit, index) => (
-                      <Badge key={index} variant="secondary" className="text-xs">
+                      <Badge key={index} variant="secondary" className="text-sm px-3 py-1">
                         {benefit}
                       </Badge>
                     ))}
                   </div>
                   
-                  <div className="flex items-center gap-2">
-                    <span className="text-xl font-bold text-primary">
+                  <div className="flex items-center gap-3 mb-6">
+                    <span className="text-3xl font-bold text-primary">
                       ${product.price}
                     </span>
                     {product.originalPrice && (
-                      <span className="text-sm line-through text-muted-foreground">
+                      <span className="text-lg line-through text-muted-foreground">
                         ${product.originalPrice}
                       </span>
                     )}
@@ -151,7 +154,22 @@ const Shop = () => {
                 </CardContent>
                 
                 <CardFooter className="p-6 pt-0">
-                  <Button className="w-full bg-primary hover:bg-primary/90 font-semibold">
+                  <Button 
+                    className="w-full bg-primary hover:bg-primary/90 text-white font-semibold text-lg py-3 rounded-full shadow-lg hover-lift"
+                    onClick={() => {
+                      // Add tracking for buy now clicks
+                      if (typeof window !== 'undefined') {
+                        import('@/lib/tracking').then(({ trackInitiateCheckout }) => {
+                          trackInitiateCheckout(product.price, 'USD', [{
+                            item_id: product.id,
+                            item_name: product.name,
+                            price: product.price,
+                            quantity: 1
+                          }]);
+                        });
+                      }
+                    }}
+                  >
                     Buy Now
                   </Button>
                 </CardFooter>
@@ -162,28 +180,28 @@ const Shop = () => {
       </section>
 
       {/* Trust Section */}
-      <section className="py-16 glass-green">
+      <section className="py-20 glass-green animate-fade-in">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl mb-2">🌿</div>
-              <h3 className="font-semibold mb-1">100% Natural</h3>
-              <p className="text-sm text-muted-foreground">Organic ingredients only</p>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-center">
+            <div className="hover-lift">
+              <div className="text-5xl mb-4">🌿</div>
+              <h3 className="font-semibold text-xl mb-2">100% Natural</h3>
+              <p className="text-base text-muted-foreground">Organic ingredients only</p>
             </div>
-            <div>
-              <div className="text-3xl mb-2">🚚</div>
-              <h3 className="font-semibold mb-1">Always Free Shipping</h3>
-              <p className="text-sm text-muted-foreground">Fast delivery across the USA</p>
+            <div className="hover-lift">
+              <div className="text-5xl mb-4">🚚</div>
+              <h3 className="font-semibold text-xl mb-2">Always Free Shipping</h3>
+              <p className="text-base text-muted-foreground">Fast delivery across the USA</p>
             </div>
-            <div>
-              <div className="text-3xl mb-2">💰</div>
-              <h3 className="font-semibold mb-1">30-Day Guarantee</h3>
-              <p className="text-sm text-muted-foreground">Money back promise</p>
+            <div className="hover-lift">
+              <div className="text-5xl mb-4">💰</div>
+              <h3 className="font-semibold text-xl mb-2">30-Day Guarantee</h3>
+              <p className="text-base text-muted-foreground">Money back promise</p>
             </div>
-            <div>
-              <div className="text-3xl mb-2">⭐</div>
-              <h3 className="font-semibold mb-1">5-Star Rated</h3>
-              <p className="text-sm text-muted-foreground">Loved by customers</p>
+            <div className="hover-lift">
+              <div className="text-5xl mb-4">⭐</div>
+              <h3 className="font-semibold text-xl mb-2">5-Star Rated</h3>
+              <p className="text-base text-muted-foreground">Loved by customers</p>
             </div>
           </div>
         </div>

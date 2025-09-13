@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "pixelId": "YOUR_META_PIXEL_ID_HERE",
+    "enabled": true
+  },
+  "googleTagManager": {
+    "containerId": "GTM-XXXXXXX",
+    "enabled": true
+  },
+  "tikTok": {
+    "pixelId": "YOUR_TIKTOK_PIXEL_ID_HERE",
+    "enabled": true
+  },
+  "events": {
+    "pageView": true,
+    "purchase": true,
+    "addToCart": false,
+    "initiateCheckout": true,
+    "viewContent": true
+  }
+}

@@ -48,101 +48,112 @@ const ProductTabs = () => {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Section Title */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-heading mb-8 text-center">Premium Evening Wellness Collection</h2>
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-5xl md:text-6xl font-heading font-bold mb-8 gradient-text">Premium Evening Wellness Collection</h2>
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {products.map((product) => (
-            <Card key={product.id} className="group overflow-hidden border-card-border hover:shadow-lg transition-all duration-300">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+          {products.map((product, index) => (
+            <Card key={product.id} className="group overflow-hidden border-2 border-card-border hover:border-primary hover:shadow-2xl transition-all duration-500 hover-lift animate-scale-in">
               <div className="relative overflow-hidden">
                 {/* Badge */}
                 {product.badge && (
-                  <Badge className="absolute top-3 left-3 z-10 bg-primary text-primary-foreground">
+                  <Badge className="absolute top-4 left-4 z-10 bg-primary text-primary-foreground text-sm px-3 py-1 font-semibold shadow-lg">
                     {product.badge}
                   </Badge>
                 )}
                 
                 {/* Product Image */}
-                <div className="aspect-square overflow-hidden">
+                <div className="aspect-square overflow-hidden bg-white p-8">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
                 
                 {/* Hover Actions */}
-                <div className="absolute top-3 right-3 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <Button size="sm" variant="outline" className="w-10 h-10 p-0 bg-white">
-                    <Heart className="h-4 w-4" />
+                <div className="absolute top-4 right-4 flex flex-col gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <Button size="sm" variant="outline" className="w-12 h-12 p-0 bg-white/90 backdrop-blur-sm hover-lift">
+                    <Heart className="h-5 w-5" />
                   </Button>
-                  <Button size="sm" variant="outline" className="w-10 h-10 p-0 bg-white">
-                    <RotateCcw className="h-4 w-4" />
+                  <Button size="sm" variant="outline" className="w-12 h-12 p-0 bg-white/90 backdrop-blur-sm hover-lift">
+                    <RotateCcw className="h-5 w-5" />
                   </Button>
-                  <Button size="sm" variant="outline" className="w-10 h-10 p-0 bg-white">
-                    <Eye className="h-4 w-4" />
+                  <Button size="sm" variant="outline" className="w-12 h-12 p-0 bg-white/90 backdrop-blur-sm hover-lift">
+                    <Eye className="h-5 w-5" />
                   </Button>
                 </div>
               </div>
               
-              <CardContent className="p-4 text-center">
+              <CardContent className="p-8 text-center">
                 {/* Rating */}
-                <div className="flex items-center justify-center gap-1 mb-2">
+                <div className="flex items-center justify-center gap-2 mb-4">
                   {[...Array(5)].map((_, i) => (
                     <Star 
                       key={i} 
-                      className={`h-4 w-4 ${
+                      className={`h-5 w-5 ${
                         i < Math.floor(product.rating) 
-                          ? "fill-primary text-primary" 
+                          ? "fill-yellow-400 text-yellow-400" 
                           : "text-gray-300"
                       }`}
                     />
                   ))}
-                  <span className="text-sm text-gray-600 ml-1">
+                  <span className="text-base text-muted-foreground ml-2">
                     ({product.reviews})
                   </span>
                 </div>
                 
                 {/* Product Name */}
-                <h3 className="font-semibold text-lg mb-2 hover:text-accent transition-colors cursor-pointer">
+                <h3 className="font-heading font-semibold text-2xl mb-4 hover:text-primary transition-colors cursor-pointer">
                   {product.name}
                 </h3>
                 
                 {/* Description */}
-                <p className="text-sm text-muted-foreground mb-3">
+                <p className="text-base text-muted-foreground mb-6 leading-relaxed">
                   {product.description}
                 </p>
 
                 {/* Benefits */}
-                <div className="flex flex-wrap gap-1 mb-3">
+                <div className="flex flex-wrap gap-2 mb-6 justify-center">
                   {product.benefits.map((benefit, index) => (
-                    <Badge key={index} variant="secondary" className="text-xs">
+                    <Badge key={index} variant="secondary" className="text-sm px-3 py-1">
                       {benefit}
                     </Badge>
                   ))}
                 </div>
                 
                 {/* Price */}
-                <div className="flex items-center justify-center gap-2 mb-4">
-                  <span className="text-xl font-bold text-primary">
+                <div className="flex items-center justify-center gap-3 mb-6">
+                  <span className="text-3xl font-bold text-primary">
                     ${product.price}
                   </span>
                   {product.originalPrice && (
-                    <span className="text-sm line-through text-muted-foreground">
+                    <span className="text-lg line-through text-muted-foreground">
                       ${product.originalPrice}
                     </span>
                   )}
                 </div>
                 
-                {/* Buy Now Button */}
-                <Button 
-                  className="w-full bg-primary hover:bg-primary/90 font-semibold"
-                  size="sm"
-                >
-                  Buy Now
-                </Button>
+                  <Button 
+                    className="w-full bg-primary hover:bg-primary/90 text-white font-semibold text-lg py-3 rounded-full shadow-lg hover-lift"
+                    onClick={() => {
+                      // Add tracking for buy now clicks
+                      if (typeof window !== 'undefined') {
+                        import('@/lib/tracking').then(({ trackInitiateCheckout }) => {
+                          trackInitiateCheckout(product.price, 'USD', [{
+                            item_id: product.id,
+                            item_name: product.name,
+                            price: product.price,
+                            quantity: 1
+                          }]);
+                        });
+                      }
+                    }}
+                  >
+                    Buy Now
+                  </Button>
               </CardContent>
             </Card>
           ))}
