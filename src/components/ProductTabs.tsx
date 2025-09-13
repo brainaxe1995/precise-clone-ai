@@ -22,7 +22,7 @@ const ProductTabs = () => {
       originalPrice: 34.99,
       rating: 4.8,
       reviews: 342,
-      image: "https://afterdarkusa.com/wp-content/uploads/2025/09/Chamomile.png",
+      image: "/api/placeholder/300/300",
       badge: "Best Seller",
       benefits: ["May support relaxation", "Caffeine-free", "USDA Organic"]
     },
@@ -34,7 +34,7 @@ const ProductTabs = () => {
       originalPrice: 39.99,
       rating: 4.9,
       reviews: 288,
-      image: "https://afterdarkusa.com/wp-content/uploads/2025/09/Lavender.png",
+      image: "/api/placeholder/300/300",
       badge: "Premium",
       benefits: ["Natural calming herbs", "Evening routine support", "Premium quality"]
     },
@@ -45,7 +45,7 @@ const ProductTabs = () => {
       price: 26.99,
       rating: 4.7,
       reviews: 189,
-      image: "https://afterdarkusa.com/wp-content/uploads/2025/09/Lemon.png",
+      image: "/api/placeholder/300/300",
       benefits: ["Caffeine-free", "Traditional herb", "Evening wellness"]
     }
   ];
