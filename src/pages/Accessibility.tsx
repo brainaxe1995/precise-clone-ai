@@ -54,7 +54,7 @@ const Accessibility = () => {
               </p>
               <ul className="list-disc list-inside mb-4 space-y-2">
                 <li>Email: accessibility@relax-tea.com</li>
-                <li>Phone: 1-800-RELAX-TEA</li>
+                <li>Phone: +12892467209</li>
                 <li>Mail: RELAX Tea Accessibility Team, 123 Tea Street, Portland, OR 97201</li>
               </ul>
             </section>
