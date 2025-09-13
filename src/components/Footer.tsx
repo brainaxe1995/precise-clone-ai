@@ -71,7 +71,7 @@ const Footer = () => {
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="h-4 w-4 text-accent mt-0.5" />
-                <span className="opacity-90">123 Wellness Ave<br />Portland, OR 97201</span>
+                <span className="opacity-90">Atlantica Marketing Beheer B.V.<br />Kvk-nummer 92016995<br />Tijnmuiden 15<br />1046AK Amsterdam</span>
               </div>
             </div>
             
