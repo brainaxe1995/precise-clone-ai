@@ -12,7 +12,7 @@ const MasterTasterSection = () => {
             <div className="bg-white rounded-2xl p-8 shadow-xl">
               <Badge className="mb-4 bg-red-500 text-white">Limited Edition</Badge>
               <img 
-                src={teaPackageImage} 
+                src="https://afterdarkusa.com/wp-content/uploads/2025/09/teaPackges.png"
                 alt="Master Tea Tester Selection" 
                 className="w-full h-80 object-cover rounded-lg mb-6"
               />
