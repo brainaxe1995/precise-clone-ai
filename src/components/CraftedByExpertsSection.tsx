@@ -88,7 +88,7 @@ const CraftedByExpertsSection = () => {
           <div className="space-y-6">
             <div className="relative">
               <img 
-                src={teaExpertImage} 
+                src="https://afterdarkusa.com/wp-content/uploads/2025/09/expert.png"
                 alt="Tea expert examining tea leaves" 
                 className="w-full h-64 object-cover rounded-lg shadow-lg"
               />
