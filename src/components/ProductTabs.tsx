@@ -7,11 +7,6 @@ import { Heart, Eye, RotateCcw, Star } from "lucide-react";
 const ProductTabs = () => {
   const [activeTab, setActiveTab] = useState("new-in");
 
-  const tabs = [
-    { id: "new-in", label: "New-In" },
-    { id: "best-seller", label: "Best Seller" },
-    { id: "most-popular", label: "Most Popular" },
-  ];
 
   const products = [
     {
@@ -47,6 +42,18 @@ const ProductTabs = () => {
       reviews: 189,
       image: "/api/placeholder/300/300",
       benefits: ["Caffeine-free", "Traditional herb", "Evening wellness"]
+    },
+    {
+      id: 4,
+      name: "Relax Chamomile Herbal tea",
+      description: "Time-honored valerian root with complementary herbs",
+      price: 32.99,
+      originalPrice: 42.99,
+      rating: 4.6,
+      reviews: 156,
+      image: "/api/placeholder/300/300",
+      badge: "Traditional",
+      benefits: ["Traditional use", "Evening ritual", "Natural ingredients"]
     }
   ];
 
