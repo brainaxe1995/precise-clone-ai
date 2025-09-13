@@ -6,12 +6,6 @@ import { Heart, Eye, RotateCcw, Star } from "lucide-react";
 
 const ProductTabs = () => {
 
-  const tabs = [
-    { id: "new-in", label: "New-In" },
-    { id: "best-seller", label: "Best Seller" },
-    { id: "most-popular", label: "Most Popular" },
-  ];
-
   const products = [
     {
       id: 1,
