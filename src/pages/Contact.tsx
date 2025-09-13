@@ -109,7 +109,7 @@ const Contact = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">info@rlex.com</p>
+                    <p className="text-muted-foreground">help@relaxproduct.com</p>
                     <p className="text-sm text-muted-foreground mt-1">
                       We typically respond within 24 hours
                     </p>
@@ -126,7 +126,7 @@ const Contact = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                    <p className="text-muted-foreground">+12892467209</p>
                     <p className="text-sm text-muted-foreground mt-1">
                       Monday - Friday, 9 AM - 6 PM EST
                     </p>
@@ -144,9 +144,10 @@ const Contact = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">
-                      123 Wellness Street<br />
-                      New York, NY 10001<br />
-                      United States
+                      Atlantica Marketing Beheer B.V.<br />
+                      Kvk-nummer 92016995<br />
+                      Tijnmuiden 15<br />
+                      1046AK Amsterdam
                     </p>
                   </CardContent>
                 </Card>
