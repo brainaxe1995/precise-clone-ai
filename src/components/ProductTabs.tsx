@@ -22,7 +22,7 @@ const ProductTabs = () => {
       originalPrice: 34.99,
       rating: 4.8,
       reviews: 342,
-      image: "/api/placeholder/300/300",
+      image: "https://afterdarkusa.com/wp-content/uploads/2025/09/Chamomile.png",
       badge: "Best Seller",
       benefits: ["May support relaxation", "Caffeine-free", "USDA Organic"]
     },
