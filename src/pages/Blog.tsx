@@ -20,7 +20,7 @@ const Blog = () => {
       excerpt: "Learn about the natural compounds in chamomile, passionflower, and other botanicals that have been used for centuries to support evening wellness.",
       date: "January 10, 2025",
       slug: "herbal-relaxation-science",
-      image: "/api/placeholder/400/250"
+      image: "https://afterdarkusa.com/wp-content/uploads/2025/09/Science-Behind.png"
     },
     {
       id: 3,
@@ -28,7 +28,7 @@ const Blog = () => {
       excerpt: "Transform your evening routine with mindful tea preparation. Discover how a simple ritual can signal to your body that it's time to wind down.",
       date: "January 5, 2025",
       slug: "bedtime-tea-ritual",
-      image: "/api/placeholder/400/250"
+      image: "https://afterdarkusa.com/wp-content/uploads/2025/09/Perfect-Bedtime.png"
     }
   ];
 
