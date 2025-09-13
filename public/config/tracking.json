@@ -13,9 +13,9 @@
   },
   "events": {
     "pageView": true,
-    "purchase": true,
+    "purchase": false,
     "addToCart": false,
-    "initiateCheckout": true,
+    "initiateCheckout": false,
     "viewContent": true
   }
 }
