@@ -34,7 +34,7 @@ const ProductTabs = () => {
       originalPrice: 39.99,
       rating: 4.9,
       reviews: 288,
-      image: "/api/placeholder/300/300",
+      image: "https://afterdarkusa.com/wp-content/uploads/2025/09/Lavender.png",
       badge: "Premium",
       benefits: ["Natural calming herbs", "Evening routine support", "Premium quality"]
     },
@@ -45,20 +45,8 @@ const ProductTabs = () => {
       price: 26.99,
       rating: 4.7,
       reviews: 189,
-      image: "/api/placeholder/300/300",
+      image: "https://afterdarkusa.com/wp-content/uploads/2025/09/Lemon.png",
       benefits: ["Caffeine-free", "Traditional herb", "Evening wellness"]
-    },
-    {
-      id: 4,
-      name: "Relax Chamomile Herbal tea",
-      description: "Time-honored valerian root with complementary herbs",
-      price: 32.99,
-      originalPrice: 42.99,
-      rating: 4.6,
-      reviews: 156,
-      image: "/api/placeholder/300/300",
-      badge: "Traditional",
-      benefits: ["Traditional use", "Evening ritual", "Natural ingredients"]
     }
   ];
 
