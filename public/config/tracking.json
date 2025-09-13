@@ -1,7 +1,7 @@
 {
   "meta": {
-    "pixelId": "YOUR_META_PIXEL_ID_HERE",
-    "accessToken": "YOUR_META_ACCESS_TOKEN_HERE",
+    "pixelId": "628983033590989",
+    "accessToken": "EAAZA7OpMExrABPISLpgN0rmOAkVzx8txDD4oWdEpGSQMZAAyrrCIHAigE3ECykV0lT2h2ZAIZBZC1jtlrBV1nN2jsC2O8rQUDHHBcJZCAXKjzyVpeTrtAh0EzGP1vbCzZAGEGsZAIB9DBal5cBlWq1EZCmGvZCQTeLCEsRDfuXG0lHYeBb3nDm36x3iEa9SbEtKgZDZD",
     "enabled": true
   },
   "google": {
