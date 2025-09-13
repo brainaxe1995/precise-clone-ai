@@ -57,6 +57,7 @@ const CookiePolicy = () => {
                 Email: help@relaxproduct.com
                 <br />
                 Phone: +12892467209
+                Phone: +31618474790
               </p>
             </section>
           </div>
