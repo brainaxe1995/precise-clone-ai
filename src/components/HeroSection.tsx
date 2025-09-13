@@ -80,7 +80,7 @@ const HeroSection = () => {
                 Always Free Shipping
               </div>
               <div className="absolute -bottom-4 -left-4 bg-secondary text-secondary-foreground px-4 py-2 rounded-full text-sm font-bold shadow-lg">
-                Made in USA
+                Quality from Europe
               </div>
             </div>
           </div>
