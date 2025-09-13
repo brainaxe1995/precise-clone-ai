@@ -4,10 +4,13 @@
 const defaultTrackingConfig = {
   meta: {
     pixelId: "YOUR_META_PIXEL_ID_HERE",
+    accessToken: "YOUR_META_ACCESS_TOKEN_HERE",
     enabled: true
   },
-  googleTagManager: {
-    containerId: "GTM-XXXXXXX",
+  google: {
+    analyticsId: "GA-XXXXXXXXXX",
+    tagManagerId: "GTM-XXXXXXX",
+    adsConversionId: "AW-XXXXXXXXXX",
     enabled: true
   },
   tikTok: {
@@ -17,9 +20,10 @@ const defaultTrackingConfig = {
   events: {
     pageView: true,
     purchase: true,
-    addToCart: false,
+    viewContent: true,
     initiateCheckout: true,
-    viewContent: true
+    contact: true,
+    newsletter: true
   }
 };
 
@@ -65,11 +69,15 @@ export const trackMetaEvent = (eventName: string, parameters?: any) => {
   }
 };
 
-// Google Tag Manager Events
-export const trackGTMEvent = (eventName: string, parameters?: any) => {
-  if (!trackingConfig.googleTagManager.enabled || typeof window === 'undefined') return;
+// Google Analytics Events
+export const trackGoogleEvent = (eventName: string, parameters?: any) => {
+  if (!trackingConfig.google.enabled || typeof window === 'undefined') return;
   
   try {
+    if (window.gtag) {
+      window.gtag('event', eventName, parameters);
+    }
+    // Also push to dataLayer for GTM
     if (window.dataLayer) {
       window.dataLayer.push({
         event: eventName,
@@ -77,7 +85,7 @@ export const trackGTMEvent = (eventName: string, parameters?: any) => {
       });
     }
   } catch (error) {
-    console.warn('GTM tracking error:', error);
+    console.warn('Google tracking error:', error);
   }
 };
 
@@ -97,7 +105,7 @@ export const trackTikTokEvent = (eventName: string, parameters?: any) => {
 // Combined tracking function
 export const trackEvent = (eventName: string, parameters?: any) => {
   trackMetaEvent(eventName, parameters);
-  trackGTMEvent(eventName, parameters);
+  trackGoogleEvent(eventName, parameters);
   trackTikTokEvent(eventName, parameters);
 };
 

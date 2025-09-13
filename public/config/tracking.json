@@ -1,21 +1,25 @@
 {
   "meta": {
     "pixelId": "YOUR_META_PIXEL_ID_HERE",
+    "accessToken": "YOUR_META_ACCESS_TOKEN_HERE",
     "enabled": true
   },
-  "googleTagManager": {
-    "containerId": "GTM-XXXXXXX",
-    "enabled": false
+  "google": {
+    "analyticsId": "GA-XXXXXXXXXX",
+    "tagManagerId": "GTM-XXXXXXX",
+    "adsConversionId": "AW-XXXXXXXXXX",
+    "enabled": true
   },
   "tikTok": {
     "pixelId": "YOUR_TIKTOK_PIXEL_ID_HERE",
-    "enabled": false
+    "enabled": true
   },
   "events": {
     "pageView": true,
-    "purchase": false,
-    "addToCart": false,
-    "initiateCheckout": false,
-    "viewContent": true
+    "purchase": true,
+    "viewContent": true,
+    "initiateCheckout": true,
+    "contact": true,
+    "newsletter": true
   }
 }

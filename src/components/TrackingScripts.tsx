@@ -4,10 +4,13 @@ import { useEffect } from 'react';
 const defaultTrackingConfig = {
   meta: {
     pixelId: "YOUR_META_PIXEL_ID_HERE",
+    accessToken: "YOUR_META_ACCESS_TOKEN_HERE",
     enabled: true
   },
-  googleTagManager: {
-    containerId: "GTM-XXXXXXX",
+  google: {
+    analyticsId: "GA-XXXXXXXXXX",
+    tagManagerId: "GTM-XXXXXXX",
+    adsConversionId: "AW-XXXXXXXXXX",
     enabled: true
   },
   tikTok: {
@@ -53,8 +56,26 @@ const TrackingScripts = () => {
       document.head.appendChild(noscript);
     }
 
+    // Google Analytics
+    if (trackingConfig.google.enabled && trackingConfig.google.analyticsId !== 'GA-XXXXXXXXXX') {
+      const gaScript = document.createElement('script');
+      gaScript.async = true;
+      gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${trackingConfig.google.analyticsId}`;
+      document.head.appendChild(gaScript);
+
+      const gaInlineScript = document.createElement('script');
+      gaInlineScript.innerHTML = `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${trackingConfig.google.analyticsId}');
+        ${trackingConfig.google.adsConversionId !== 'AW-XXXXXXXXXX' ? `gtag('config', '${trackingConfig.google.adsConversionId}');` : ''}
+      `;
+      document.head.appendChild(gaInlineScript);
+    }
+
     // Google Tag Manager
-    if (trackingConfig.googleTagManager.enabled && trackingConfig.googleTagManager.containerId !== 'GTM-XXXXXXX') {
+    if (trackingConfig.google.enabled && trackingConfig.google.tagManagerId !== 'GTM-XXXXXXX') {
       // GTM Head script
       const gtmScript = document.createElement('script');
       gtmScript.innerHTML = `
@@ -62,13 +83,13 @@ const TrackingScripts = () => {
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','${trackingConfig.googleTagManager.containerId}');
+        })(window,document,'script','dataLayer','${trackingConfig.google.tagManagerId}');
       `;
       document.head.appendChild(gtmScript);
 
       // GTM Body noscript
       const gtmNoscript = document.createElement('noscript');
-      gtmNoscript.innerHTML = `<iframe src="https://www.googletagmanager.com/ns.html?id=${trackingConfig.googleTagManager.containerId}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`;
+      gtmNoscript.innerHTML = `<iframe src="https://www.googletagmanager.com/ns.html?id=${trackingConfig.google.tagManagerId}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`;
       document.body.appendChild(gtmNoscript);
     }
 
