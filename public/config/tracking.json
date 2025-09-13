@@ -5,11 +5,11 @@
   },
   "googleTagManager": {
     "containerId": "GTM-XXXXXXX",
-    "enabled": true
+    "enabled": false
   },
   "tikTok": {
     "pixelId": "YOUR_TIKTOK_PIXEL_ID_HERE",
-    "enabled": true
+    "enabled": false
   },
   "events": {
     "pageView": true,
