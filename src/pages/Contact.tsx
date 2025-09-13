@@ -127,6 +127,7 @@ const Contact = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">+12892467209</p>
+                    <p className="text-muted-foreground">+31618474790</p>
                     <p className="text-sm text-muted-foreground mt-1">
                       Monday - Friday, 9 AM - 6 PM EST
                     </p>
