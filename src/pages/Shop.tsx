@@ -27,7 +27,7 @@ const Shop = () => {
       originalPrice: 39.99,
       rating: 4.9,
       reviews: 288,
-      image: "/api/placeholder/300/300",
+      image: "https://afterdarkusa.com/wp-content/uploads/2025/09/Lavender.png",
       badge: "Premium",
       benefits: ["Natural calming herbs", "Sleep routine support", "Premium quality"]
     },
