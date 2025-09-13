@@ -20,8 +20,8 @@ const MasterTasterSection = () => {
                 <h3 className="text-2xl font-bold mb-2">Master Tea Tester Selections</h3>
                 <p className="text-gray-600 mb-4">Handpicked by our head tea master</p>
                 <div className="text-3xl font-bold text-accent mb-4">$24.99</div>
-                <Button className="w-full bg-accent hover:bg-accent/90">
-                  Add to Cart
+                <Button className="w-full bg-green-800 hover:bg-green-700 text-white font-bold py-3 shadow-lg transition-all duration-300 hover:scale-105">
+                  Buy Now
                 </Button>
               </div>
             </div>
@@ -71,19 +71,19 @@ const MasterTasterSection = () => {
               </div>
             </div>
             
-            {/* Stats */}
+            {/* New Brand Features */}
             <div className="grid grid-cols-3 gap-6 pt-6 border-t border-gray-200">
               <div className="text-center">
-                <div className="text-2xl font-bold text-accent">30+</div>
-                <div className="text-sm text-gray-600">Years Experience</div>
+                <div className="text-2xl font-bold text-accent">🌱</div>
+                <div className="text-sm text-gray-600 font-semibold">Fresh Selection</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-accent">500+</div>
-                <div className="text-sm text-gray-600">Teas Curated</div>
+                <div className="text-2xl font-bold text-accent">🇺🇸</div>
+                <div className="text-sm text-gray-600 font-semibold">USA Crafted</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-accent">98%</div>
-                <div className="text-sm text-gray-600">Customer Satisfaction</div>
+                <div className="text-2xl font-bold text-accent">⭐</div>
+                <div className="text-sm text-gray-600 font-semibold">Premium Quality</div>
               </div>
             </div>
             

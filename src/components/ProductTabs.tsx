@@ -41,6 +41,18 @@ const ProductTabs = () => {
       reviews: 189,
       image: productLemon,
       benefits: ["Caffeine-free", "Citrus flavor", "Evening wellness"]
+    },
+    {
+      id: 4,
+      name: "Master Tea Tester Selections",
+      description: "Handpicked by our head tea master for the ultimate experience",
+      price: 39.99,
+      originalPrice: 49.99,
+      rating: 5.0,
+      reviews: 156,
+      image: "https://afterdarkusa.com/wp-content/uploads/2025/09/teaPackges.png",
+      badge: "Limited Edition",
+      benefits: ["Expert curated", "Premium selection", "Limited availability"]
     }
   ];
 
@@ -137,7 +149,7 @@ const ProductTabs = () => {
                 </div>
                 
                   <Button 
-                    className="w-full bg-primary hover:bg-primary/90 text-white font-semibold text-lg py-3 rounded-full shadow-lg hover-lift"
+                    className="w-full bg-green-800 hover:bg-green-700 text-white font-bold text-lg py-4 rounded-full shadow-xl hover:scale-105 transition-all duration-300"
                     onClick={() => {
                       // Add tracking for buy now clicks
                       if (typeof window !== 'undefined') {

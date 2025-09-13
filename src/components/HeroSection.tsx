@@ -5,11 +5,11 @@ const HeroSection = () => {
   return (
     <section className="min-h-screen bg-gradient-to-br from-secondary/20 to-primary/5 py-20">
       <div className="container mx-auto px-4">
-        {/* Trust badge */}
+        {/* Brand badge */}
         <div className="flex justify-center mb-12 animate-fade-in">
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-white shadow-lg border border-primary/10">
-            <span className="text-primary mr-3 text-lg">⭐⭐⭐⭐⭐</span>
-            <span className="text-sm font-semibold text-primary">Trusted by 50,000+ Americans</span>
+          <div className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-primary/10 to-secondary/10 shadow-xl border-2 border-primary/20 backdrop-blur-sm">
+            <span className="text-primary mr-3 text-2xl">🌿</span>
+            <span className="text-lg font-bold text-primary">Premium Relax Herbal Teas for Evening Wellbeing</span>
           </div>
         </div>
 

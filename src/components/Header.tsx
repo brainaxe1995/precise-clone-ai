@@ -25,19 +25,19 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-sm font-medium hover:text-primary transition-colors">Home</Link>
-            <Link to="/shop" className="text-sm font-medium hover:text-primary transition-colors">Shop Now</Link>
-            <Link to="/blog" className="text-sm font-medium hover:text-primary transition-colors">Blog</Link>
-            <Link to="/about" className="text-sm font-medium hover:text-primary transition-colors">About</Link>
-            <Link to="/contact" className="text-sm font-medium hover:text-primary transition-colors">Contact</Link>
-            <Link to="/faq" className="text-sm font-medium hover:text-primary transition-colors">FAQ</Link>
+            <Link to="/" onClick={() => window.scrollTo(0, 0)} className="text-sm font-medium hover:text-primary transition-colors">Home</Link>
+            <Link to="/shop" onClick={() => window.scrollTo(0, 0)} className="text-sm font-medium hover:text-primary transition-colors">Shop Now</Link>
+            <Link to="/blog" onClick={() => window.scrollTo(0, 0)} className="text-sm font-medium hover:text-primary transition-colors">Blog</Link>
+            <Link to="/about" onClick={() => window.scrollTo(0, 0)} className="text-sm font-medium hover:text-primary transition-colors">About</Link>
+            <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="text-sm font-medium hover:text-primary transition-colors">Contact</Link>
+            <Link to="/faq" onClick={() => window.scrollTo(0, 0)} className="text-sm font-medium hover:text-primary transition-colors">FAQ</Link>
           </nav>
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="default" size="sm" className="bg-primary hover:bg-primary/90">
+            <Button variant="default" size="sm" className="bg-green-800 hover:bg-green-700 text-white font-bold">
               <ShoppingCart className="h-4 w-4 mr-2" />
-              Cart (0)
+              Shop Now
             </Button>
           </div>
 
@@ -56,16 +56,16 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden bg-card border-t border-border animate-slide-up">
             <nav className="flex flex-col space-y-4 py-6">
-              <Link to="/" className="text-sm font-medium hover:text-primary transition-colors">Home</Link>
-              <Link to="/shop" className="text-sm font-medium hover:text-primary transition-colors">Shop Now</Link>
-              <Link to="/blog" className="text-sm font-medium hover:text-primary transition-colors">Blog</Link>
-              <Link to="/about" className="text-sm font-medium hover:text-primary transition-colors">About</Link>
-              <Link to="/contact" className="text-sm font-medium hover:text-primary transition-colors">Contact</Link>
-              <Link to="/faq" className="text-sm font-medium hover:text-primary transition-colors">FAQ</Link>
+              <Link to="/" onClick={() => { window.scrollTo(0, 0); setIsMenuOpen(false); }} className="text-sm font-medium hover:text-primary transition-colors">Home</Link>
+              <Link to="/shop" onClick={() => { window.scrollTo(0, 0); setIsMenuOpen(false); }} className="text-sm font-medium hover:text-primary transition-colors">Shop Now</Link>
+              <Link to="/blog" onClick={() => { window.scrollTo(0, 0); setIsMenuOpen(false); }} className="text-sm font-medium hover:text-primary transition-colors">Blog</Link>
+              <Link to="/about" onClick={() => { window.scrollTo(0, 0); setIsMenuOpen(false); }} className="text-sm font-medium hover:text-primary transition-colors">About</Link>
+              <Link to="/contact" onClick={() => { window.scrollTo(0, 0); setIsMenuOpen(false); }} className="text-sm font-medium hover:text-primary transition-colors">Contact</Link>
+              <Link to="/faq" onClick={() => { window.scrollTo(0, 0); setIsMenuOpen(false); }} className="text-sm font-medium hover:text-primary transition-colors">FAQ</Link>
               <div className="flex flex-col space-y-3 pt-4 border-t border-border">
-                <Button variant="default" className="bg-primary hover:bg-primary/90">
+                <Button variant="default" className="bg-green-800 hover:bg-green-700 text-white font-bold">
                   <ShoppingCart className="h-4 w-4 mr-2" />
-                  Cart (0)
+                  Shop Now
                 </Button>
               </div>
             </nav>

@@ -43,6 +43,18 @@ const Shop = () => {
       reviews: 189,
       image: productLemon,
       benefits: ["Caffeine-free", "Citrus flavor", "Evening wellness"]
+    },
+    {
+      id: 4,
+      name: "Master Tea Tester Selections",
+      description: "Handpicked by our head tea master for the ultimate experience",
+      price: 39.99,
+      originalPrice: 49.99,
+      rating: 5.0,
+      reviews: 156,
+      image: "https://afterdarkusa.com/wp-content/uploads/2025/09/teaPackges.png",
+      badge: "Limited Edition",
+      benefits: ["Expert curated", "Premium selection", "Limited availability"]
     }
   ];
 
@@ -89,7 +101,7 @@ const Shop = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-heading font-bold text-center mb-12 animate-fade-in">Our Premium Collection</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-8xl mx-auto">
             {products.map((product) => (
               <Card key={product.id} className="glass-card hover-scale overflow-hidden border-2 border-card-border hover:border-primary hover:shadow-2xl transition-all duration-500">
                 {product.badge && (
@@ -155,7 +167,7 @@ const Shop = () => {
                 
                 <CardFooter className="p-6 pt-0">
                   <Button 
-                    className="w-full bg-primary hover:bg-primary/90 text-white font-semibold text-lg py-3 rounded-full shadow-lg hover-lift"
+                    className="w-full bg-green-800 hover:bg-green-700 text-white font-bold text-lg py-4 rounded-full shadow-xl hover:scale-105 transition-all duration-300"
                     onClick={() => {
                       // Add tracking for buy now clicks
                       if (typeof window !== 'undefined') {

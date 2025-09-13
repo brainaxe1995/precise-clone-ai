@@ -16,18 +16,18 @@ const ExquisiteTasteSection = () => {
               and blended with natural ingredients to create extraordinary flavors 
               that awaken your senses.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-accent">100+</div>
-                <div className="text-sm text-gray-600">Tea Varieties</div>
+                <div className="text-3xl font-bold text-accent">🌱</div>
+                <div className="text-sm text-gray-600 font-semibold">New Brand</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-accent">25+</div>
-                <div className="text-sm text-gray-600">Years Experience</div>
+                <div className="text-3xl font-bold text-accent">🇺🇸</div>
+                <div className="text-sm text-gray-600 font-semibold">Made in USA</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-accent">50k+</div>
-                <div className="text-sm text-gray-600">Happy Customers</div>
+                <div className="text-3xl font-bold text-accent">🌿</div>
+                <div className="text-sm text-gray-600 font-semibold">Premium Quality</div>
               </div>
             </div>
           </div>
