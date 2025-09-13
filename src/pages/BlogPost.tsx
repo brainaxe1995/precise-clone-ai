@@ -36,7 +36,7 @@ const BlogPost = () => {
     "herbal-relaxation-science": {
       title: "The Science Behind Herbal Relaxation",
       date: "January 10, 2025",
-      image: "/api/placeholder/800/400",
+      image: "https://afterdarkusa.com/wp-content/uploads/2025/09/Science-Behind.png",
       content: `
         <p>For centuries, cultures around the world have turned to herbs and botanicals to support relaxation and wellness. Modern research is beginning to understand the science behind these traditional practices.</p>
         
@@ -58,7 +58,7 @@ const BlogPost = () => {
     "bedtime-tea-ritual": {
       title: "Creating the Perfect Bedtime Tea Ritual",
       date: "January 5, 2025",
-      image: "/api/placeholder/800/400",
+      image: "https://afterdarkusa.com/wp-content/uploads/2025/09/Perfect-Bedtime.png",
       content: `
         <p>Transforming your evening routine with a mindful tea ritual can create a beautiful transition from the busyness of day to the peace of evening. Here's how to create your own meaningful practice:</p>
         
