@@ -4,6 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star, Filter, SlidersHorizontal } from "lucide-react";
+import productChamomile from "@/assets/product-chamomile.png";
+import productLavender from "@/assets/product-lavender.png";
+import productLemon from "@/assets/product-lemon.png";
 
 const Shop = () => {
   const products = [
@@ -15,7 +18,7 @@ const Shop = () => {
       originalPrice: 34.99,
       rating: 4.8,
       reviews: 342,
-      image: "/api/placeholder/300/300",
+      image: productChamomile,
       badge: "Best Seller",
       benefits: ["May support relaxation", "Caffeine-free", "USDA Organic"]
     },
@@ -27,53 +30,19 @@ const Shop = () => {
       originalPrice: 39.99,
       rating: 4.9,
       reviews: 288,
-      image: "https://afterdarkusa.com/wp-content/uploads/2025/09/Lavender.png",
+      image: productLavender,
       badge: "Premium",
-      benefits: ["Natural calming herbs", "Sleep routine support", "Premium quality"]
+      benefits: ["Natural calming herbs", "Evening routine support", "Premium quality"]
     },
     {
       id: 3,
-      name: "Relax Lemon balm Herbal tea",
-      description: "Traditional passionflower for tranquil moments",
+      name: "Relax Lemon Herbal tea",
+      description: "Fresh lemon blend for tranquil moments",
       price: 26.99,
       rating: 4.7,
       reviews: 189,
-      image: "/api/placeholder/300/300",
-      benefits: ["Caffeine-free", "Traditional herb", "Evening wellness"]
-    },
-    {
-      id: 4,
-      name: "Relax Chamomile Herbal tea",
-      description: "Time-honored valerian root with complementary herbs",
-      price: 32.99,
-      originalPrice: 42.99,
-      rating: 4.6,
-      reviews: 156,
-      image: "/api/placeholder/300/300",
-      badge: "Traditional",
-      benefits: ["Traditional use", "Evening ritual", "Natural ingredients"]
-    },
-    {
-      id: 5,
-      name: "Relax Lemon balm Herbal tea",
-      description: "Soothing lemon balm for gentle evening comfort",
-      price: 22.99,
-      rating: 4.8,
-      reviews: 234,
-      image: "/api/placeholder/300/300",
-      benefits: ["Mild citrus flavor", "Calming properties", "Organic"]
-    },
-    {
-      id: 6,
-      name: "Relax Lavender Herbal tea",
-      description: "Complete collection of our most popular evening teas",
-      price: 79.99,
-      originalPrice: 119.99,
-      rating: 4.9,
-      reviews: 423,
-      image: "/api/placeholder/300/300",
-      badge: "Value Pack",
-      benefits: ["5 tea varieties", "Perfect for trying", "Always free shipping"]
+      image: productLemon,
+      benefits: ["Caffeine-free", "Citrus flavor", "Evening wellness"]
     }
   ];
 
@@ -117,7 +86,7 @@ const Shop = () => {
       {/* Products Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {products.map((product) => (
               <Card key={product.id} className="glass-card hover-scale overflow-hidden">
                 {product.badge && (
@@ -126,10 +95,12 @@ const Shop = () => {
                   </Badge>
                 )}
                 
-                <div className="aspect-square bg-gradient-green-yellow p-8 flex items-center justify-center">
-                  <div className="w-32 h-32 bg-primary/10 rounded-full flex items-center justify-center">
-                    <span className="text-4xl">🍃</span>
-                  </div>
+                <div className="aspect-square bg-white p-4 flex items-center justify-center">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 
                 <CardContent className="p-6">

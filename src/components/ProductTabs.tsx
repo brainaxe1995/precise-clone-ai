@@ -1,19 +1,12 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Heart, Eye, RotateCcw, Star } from "lucide-react";
+import productChamomile from "@/assets/product-chamomile.png";
+import productLavender from "@/assets/product-lavender.png";
+import productLemon from "@/assets/product-lemon.png";
 
 const ProductTabs = () => {
-  const [activeTab, setActiveTab] = useState("all");
-
-  const tabs = [
-    { id: "all", label: "All Products" },
-    { id: "bestseller", label: "Best Sellers" },
-    { id: "premium", label: "Premium" },
-    { id: "traditional", label: "Traditional" }
-  ];
-
   const products = [
     {
       id: 1,
@@ -23,7 +16,7 @@ const ProductTabs = () => {
       originalPrice: 34.99,
       rating: 4.8,
       reviews: 342,
-      image: "/api/placeholder/300/300",
+      image: productChamomile,
       badge: "Best Seller",
       benefits: ["May support relaxation", "Caffeine-free", "USDA Organic"]
     },
@@ -35,31 +28,19 @@ const ProductTabs = () => {
       originalPrice: 39.99,
       rating: 4.9,
       reviews: 288,
-      image: "/api/placeholder/300/300",
+      image: productLavender,
       badge: "Premium",
       benefits: ["Natural calming herbs", "Evening routine support", "Premium quality"]
     },
     {
       id: 3,
-      name: "Relax Lemon balm Herbal tea",
-      description: "Traditional passionflower for tranquil moments",
+      name: "Relax Lemon Herbal tea",
+      description: "Fresh lemon blend for tranquil moments",
       price: 26.99,
       rating: 4.7,
       reviews: 189,
-      image: "/api/placeholder/300/300",
-      benefits: ["Caffeine-free", "Traditional herb", "Evening wellness"]
-    },
-    {
-      id: 4,
-      name: "Relax Chamomile Herbal tea",
-      description: "Time-honored valerian root with complementary herbs",
-      price: 32.99,
-      originalPrice: 42.99,
-      rating: 4.6,
-      reviews: 156,
-      image: "/api/placeholder/300/300",
-      badge: "Traditional",
-      benefits: ["Traditional use", "Evening ritual", "Natural ingredients"]
+      image: productLemon,
+      benefits: ["Caffeine-free", "Citrus flavor", "Evening wellness"]
     }
   ];
 
@@ -69,27 +50,10 @@ const ProductTabs = () => {
         {/* Section Title */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-heading mb-8 text-center">Premium Evening Wellness Collection</h2>
-          
-          {/* Tabs */}
-          <div className="flex flex-wrap justify-center gap-2 mb-8">
-            {tabs.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`px-6 py-2 rounded-full transition-all duration-300 ${
-                  activeTab === tab.id
-                    ? "bg-accent text-accent-foreground"
-                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {products.map((product) => (
             <Card key={product.id} className="group overflow-hidden border-card-border hover:shadow-lg transition-all duration-300">
               <div className="relative overflow-hidden">
