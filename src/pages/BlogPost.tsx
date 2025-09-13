@@ -11,7 +11,7 @@ const BlogPost = () => {
     "natural-evening-routine": {
       title: "5 Natural Ways to Improve Your Evening Routine",
       date: "January 15, 2025",
-      image: "/api/placeholder/800/400",
+      image: "https://afterdarkusa.com/wp-content/uploads/2025/09/Natural-Ways-.png",
       content: `
         <p>Creating a peaceful evening routine can significantly impact your overall wellness and help you transition into a more restful state. Here are five gentle, natural approaches that many find helpful:</p>
         

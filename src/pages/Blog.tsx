@@ -12,7 +12,7 @@ const Blog = () => {
       excerpt: "Discover gentle, natural methods to help you unwind and prepare for restful nights. Our wellness experts share time-tested techniques for better relaxation.",
       date: "January 15, 2025",
       slug: "natural-evening-routine",
-      image: "/api/placeholder/400/250"
+      image: "https://afterdarkusa.com/wp-content/uploads/2025/09/Natural-Ways-.png"
     },
     {
       id: 2,
