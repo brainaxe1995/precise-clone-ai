@@ -101,7 +101,7 @@ const Footer = () => {
               <div className="flex items-center gap-3 text-xs opacity-70">
                 <span>💳 Secure Payment</span>
                 <span>🔒 SSL Protected</span>
-                <span>🇺🇸 Made in USA</span>
+                <span>🇪🇺 Quality from Europe</span>
               </div>
             </div>
           </div>
