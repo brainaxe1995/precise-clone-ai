@@ -72,7 +72,7 @@ const HeroSection = () => {
             <div className="relative max-w-lg mx-auto">
               <div className="absolute inset-0 bg-gradient-to-r from-secondary/20 to-primary/20 rounded-3xl blur-3xl"></div>
               <img
-                src={heroImage}
+                src="https://afterdarkusa.com/wp-content/uploads/2025/09/relax.png"
                 alt="RELAX Premium Herbal Tea for Evening Wellness"
                 className="relative w-full h-auto rounded-3xl shadow-2xl hover:scale-105 transition-transform duration-700"
               />
