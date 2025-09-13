@@ -20,7 +20,12 @@ const MasterTasterSection = () => {
                 <h3 className="text-2xl font-bold mb-2">Master Tea Tester Selections</h3>
                 <p className="text-gray-600 mb-4">Handpicked by our head tea master</p>
                 <div className="text-3xl font-bold text-accent mb-4">$24.99</div>
-                <Button className="w-full bg-green-800 hover:bg-green-700 text-white font-bold py-3 shadow-lg transition-all duration-300 hover:scale-105">
+                <Button 
+                  className="w-full bg-green-800 hover:bg-green-700 text-white font-bold py-3 shadow-lg transition-all duration-300 hover:scale-105"
+                  onClick={() => {
+                    window.location.href = 'https://pay.relaxproduct.com/relax-tea/';
+                  }}
+                >
                   Buy Now
                 </Button>
               </div>

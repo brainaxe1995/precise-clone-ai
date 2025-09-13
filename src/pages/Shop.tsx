@@ -180,6 +180,17 @@ const Shop = () => {
                           }]);
                         });
                       }
+                      
+                      // Navigate to checkout URL
+                      const getCheckoutUrl = (productName: string) => {
+                        if (productName.includes('Chamomile')) return 'https://pay.relaxproduct.com/relax-tea/?pack=Chamomile';
+                        if (productName.includes('Lavender')) return 'https://pay.relaxproduct.com/relax-tea/?pack=lavender';
+                        if (productName.includes('Lemon')) return 'https://pay.relaxproduct.com/relax-tea/?pack=Lemon';
+                        if (productName.includes('Master Tea Tester')) return 'https://pay.relaxproduct.com/relax-tea/';
+                        return 'https://pay.relaxproduct.com/relax-tea/';
+                      };
+                      
+                      window.location.href = getCheckoutUrl(product.name);
                     }}
                   >
                     Buy Now
