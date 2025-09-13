@@ -6,7 +6,7 @@ const FindRightTeaSection = () => {
     <section 
       className="py-20 relative"
       style={{
-        backgroundImage: `url(${teaPlantationImage})`,
+        backgroundImage: `url(https://afterdarkusa.com/wp-content/uploads/2025/09/relaxHeor.jpg)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
