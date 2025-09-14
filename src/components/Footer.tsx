@@ -28,14 +28,8 @@ const Footer = () => {
               <a href="https://www.facebook.com/relaxherbaltea" target="_blank" rel="noopener noreferrer">
                 <Facebook className="h-5 w-5 cursor-pointer hover:text-accent transition-colors" />
               </a>
-              <a href="https://twitter.com/relaxproduct" target="_blank" rel="noopener noreferrer">
-                <Twitter className="h-5 w-5 cursor-pointer hover:text-accent transition-colors" />
-              </a>
               <a href="https://instagram.com/relaxproduct" target="_blank" rel="noopener noreferrer">
                 <Instagram className="h-5 w-5 cursor-pointer hover:text-accent transition-colors" />
-              </a>
-              <a href="https://youtube.com/relaxproduct" target="_blank" rel="noopener noreferrer">
-                <Youtube className="h-5 w-5 cursor-pointer hover:text-accent transition-colors" />
               </a>
             </div>
           </div>
