@@ -25,7 +25,7 @@ const Footer = () => {
               Made with 100% organic ingredients for your wellness journey.
             </p>
             <div className="flex space-x-4">
-              <a href="https://facebook.com/relaxproduct" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.facebook.com/relaxherbaltea" target="_blank" rel="noopener noreferrer">
                 <Facebook className="h-5 w-5 cursor-pointer hover:text-accent transition-colors" />
               </a>
               <a href="https://twitter.com/relaxproduct" target="_blank" rel="noopener noreferrer">
