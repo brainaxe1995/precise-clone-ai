@@ -7,6 +7,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast";
+import { Loader2 } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -15,11 +17,31 @@ const Contact = () => {
     subject: "",
     message: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Contact form submitted:", formData);
+    setIsSubmitting(true);
+    
+    // Simulate form submission with loading
+    setTimeout(() => {
+      toast({
+        title: "Success!",
+        description: "Your message has been sent successfully. We'll get back to you within 24 hours.",
+        duration: 5000,
+      });
+      
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: ""
+      });
+      
+      setIsSubmitting(false);
+    }, 2000);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -89,8 +111,20 @@ const Contact = () => {
                   rows={6}
                   className="glass-white"
                 />
-                <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90">
-                  Send Message
+                <Button 
+                  type="submit" 
+                  size="lg" 
+                  className="w-full bg-primary hover:bg-primary/90"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Sending Message...
+                    </>
+                  ) : (
+                    "Send Message"
+                  )}
                 </Button>
               </form>
             </div>

@@ -19,7 +19,9 @@ const Footer = () => {
               <div className="glass-green p-2 rounded-lg">
                 <span className="text-xl">🍃</span>
               </div>
-              <h3 className="text-2xl font-heading font-bold">RELAX</h3>
+              <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                <img src="/src/assets/relax-logo.png" alt="RELAX" className="h-8 w-auto mb-2" />
+              </Link>
             </div>
             <p className="text-sm opacity-90 leading-relaxed mb-4">
               Premium herbal teas designed to support natural relaxation and evening routines. 

@@ -20,7 +20,9 @@ const Header = () => {
             <div className="bg-primary/10 p-2 rounded-lg">
               <span className="text-2xl">🍃</span>
             </div>
-            <h1 className="text-2xl font-heading font-bold text-primary">RELAX</h1>
+            <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+              <img src="/src/assets/relax-logo.png" alt="RELAX" className="h-8 w-auto" />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
