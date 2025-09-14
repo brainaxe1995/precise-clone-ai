@@ -17,9 +17,6 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="bg-primary/10 p-2 rounded-lg">
-              <span className="text-2xl">🍃</span>
-            </div>
             <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <img src="/src/assets/relax-logo.png" alt="RELAX" className="h-8 w-auto" />
             </Link>
