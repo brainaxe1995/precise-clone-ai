@@ -19,7 +19,7 @@ const HeroSection = () => {
           {/* Mobile: Image First, Desktop: Text First */}
           <div className="order-2 lg:order-1 animate-slide-up">
             <p className="text-primary/80 text-lg font-medium tracking-wider uppercase mb-6 font-heading">
-              Premium American Herbal Tea
+              Premium European Herbal Tea
             </p>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading leading-tight mb-8 text-primary">
@@ -30,7 +30,7 @@ const HeroSection = () => {
             </h1>
             
             <p className="text-xl md:text-2xl mb-8 text-primary/70 leading-relaxed">
-              Experience gentle relaxation with our premium herbal tea blend crafted in the USA. 
+              Experience gentle relaxation with our premium herbal tea blend crafted in Europe. 
               Perfect for your evening relaxation routine and peaceful moments.
             </p>
             
@@ -38,6 +38,14 @@ const HeroSection = () => {
               <Button 
                 size="lg" 
                 className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 text-lg font-bold transition-all duration-500 hover:scale-105 shadow-xl rounded-full"
+                onClick={() => {
+                  const shopElement = document.querySelector('#shop-section');
+                  if (shopElement) {
+                    shopElement.scrollIntoView({ behavior: 'smooth' });
+                  } else {
+                    window.location.href = '/shop';
+                  }
+                }}
               >
                 Shop RELAX Tea Now
               </Button>
@@ -45,6 +53,14 @@ const HeroSection = () => {
                 variant="outline"
                 size="lg" 
                 className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-4 text-lg font-bold transition-all duration-500 rounded-full"
+                onClick={() => {
+                  const aboutElement = document.querySelector('#about-section');
+                  if (aboutElement) {
+                    aboutElement.scrollIntoView({ behavior: 'smooth' });
+                  } else {
+                    window.location.href = '/about';
+                  }
+                }}
               >
                 Learn More
               </Button>

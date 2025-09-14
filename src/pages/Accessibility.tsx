@@ -53,10 +53,10 @@ const Accessibility = () => {
                 Please let us know if you encounter accessibility barriers:
               </p>
               <ul className="list-disc list-inside mb-4 space-y-2">
-                <li>Email: accessibility@relax-tea.com</li>
+                <li>Email: help@relaxproduct.com</li>
                 <li>Phone: +12892467209</li>
                 <li>Phone: +31618474790</li>
-                <li>Mail: RELAX Tea Accessibility Team, 123 Tea Street, Portland, OR 97201</li>
+                <li>Mail: Atlantica Marketing Beheer B.V., Kvk-nummer 92016995, Tijnmuiden 15, 1046AK Amsterdam</li>
               </ul>
             </section>
             

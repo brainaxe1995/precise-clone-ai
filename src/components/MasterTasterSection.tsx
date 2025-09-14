@@ -68,7 +68,7 @@ const MasterTasterSection = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-accent rounded-full"></div>
-                <span className="text-gray-700">Certified organic and fair trade</span>
+                <span className="text-gray-700">Premium quality and ethically sourced</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-accent rounded-full"></div>
@@ -83,8 +83,8 @@ const MasterTasterSection = () => {
                 <div className="text-sm text-gray-600 font-semibold">Fresh Selection</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-accent">🇺🇸</div>
-                <div className="text-sm text-gray-600 font-semibold">USA Crafted</div>
+                <div className="text-2xl font-bold text-accent">🇪🇺</div>
+                <div className="text-sm text-gray-600 font-semibold">Europe Crafted</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-accent">⭐</div>
@@ -92,7 +92,12 @@ const MasterTasterSection = () => {
               </div>
             </div>
             
-            <Button size="lg" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-white">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-accent text-accent hover:bg-accent hover:text-white"
+              onClick={() => window.location.href = '/about'}
+            >
               Learn More About Our Process
             </Button>
           </div>

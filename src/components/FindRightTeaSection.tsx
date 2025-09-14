@@ -40,7 +40,7 @@ const FindRightTeaSection = () => {
                 <span className="text-2xl">🌱</span>
               </div>
               <h3 className="font-semibold mb-2">100% Organic</h3>
-              <p className="text-sm opacity-80">Certified organic tea leaves sourced from the finest gardens</p>
+              <p className="text-sm opacity-80">Premium tea leaves sourced from the finest gardens</p>
             </div>
             
             <div className="text-center">
@@ -55,8 +55,8 @@ const FindRightTeaSection = () => {
               <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🚚</span>
               </div>
-              <h3 className="font-semibold mb-2">Free Delivery</h3>
-              <p className="text-sm opacity-80">Free shipping on orders over $50 worldwide</p>
+              <h3 className="font-semibold mb-2">Always Free Delivery</h3>
+              <p className="text-sm opacity-80">Free shipping on all orders in Europe</p>
             </div>
           </div>
         </div>

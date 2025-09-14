@@ -13,7 +13,7 @@ const About = () => {
       <section className="py-20 gradient-green-yellow">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-heading mb-6">
-            About <span className="text-primary">RLEX</span>
+            About <span className="text-primary">RELAX</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             We're dedicated to promoting natural wellness through premium herbal teas 
@@ -29,7 +29,7 @@ const About = () => {
             <div>
               <h2 className="text-3xl md:text-4xl font-heading mb-6">Our Story</h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Founded with a passion for natural wellness, RLEX was created to provide 
+                Founded with a passion for natural wellness, RELAX was created to provide 
                 high-quality herbal teas that support healthy sleep routines without making 
                 unrealistic promises.
               </p>
@@ -38,7 +38,10 @@ const About = () => {
                 sourced responsibly from trusted growers around the world. Each cup 
                 represents our commitment to quality and your wellbeing.
               </p>
-              <Button className="bg-primary hover:bg-primary/90">
+              <Button 
+                className="bg-primary hover:bg-primary/90"
+                onClick={() => window.location.href = '/shop'}
+              >
                 Shop Our Collection
               </Button>
             </div>
@@ -57,7 +60,7 @@ const About = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-heading mb-6">Our Values</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              These core principles guide everything we do at RLEX.
+              These core principles guide everything we do at RELAX.
             </p>
           </div>
           
@@ -126,19 +129,22 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                name: "Sarah Johnson",
+                name: "Anna van der Berg",
                 role: "Founder & Tea Expert",
-                description: "20+ years in herbal wellness and sustainable sourcing"
+                description: "20+ years in herbal wellness and sustainable sourcing",
+                email: "team@relaxproduct.com"
               },
               {
-                name: "Michael Chen",
-                role: "Quality Assurance Manager",
-                description: "Ensures every batch meets our rigorous quality standards"
+                name: "Pieter Janssen",
+                role: "Quality Assurance Manager", 
+                description: "Ensures every batch meets our rigorous quality standards",
+                email: "team@relaxproduct.com"
               },
               {
-                name: "Emma Rodriguez",
+                name: "Sophie Vermeer",
                 role: "Customer Experience Lead",
-                description: "Dedicated to making your RLEX journey exceptional"
+                description: "Dedicated to making your RELAX journey exceptional", 
+                email: "team@relaxproduct.com"
               }
             ].map((member, index) => (
               <Card key={index} className="glass-card text-center p-8 hover-scale">
@@ -148,7 +154,13 @@ const About = () => {
                   </div>
                   <h3 className="font-heading text-xl mb-2">{member.name}</h3>
                   <p className="text-primary font-medium mb-3">{member.role}</p>
-                  <p className="text-sm text-muted-foreground">{member.description}</p>
+                  <p className="text-sm text-muted-foreground mb-4">{member.description}</p>
+                  <a 
+                    href={`mailto:${member.email}`} 
+                    className="text-primary hover:text-primary/80 text-sm font-medium"
+                  >
+                    Contact: {member.email}
+                  </a>
                 </CardContent>
               </Card>
             ))}
@@ -160,14 +172,18 @@ const About = () => {
       <section className="py-20 glass-green">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-heading mb-6">
-            Ready to Experience RLEX?
+            Ready to Experience RELAX?
           </h2>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join thousands of customers who trust RLEX for their evening relaxation routine.
+            Join thousands of customers who trust RELAX for their evening relaxation routine.
           </p>
-          <Button size="lg" className="bg-primary hover:bg-primary/90 px-8 py-4">
-            Shop Now
-          </Button>
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary/90 px-8 py-4"
+                onClick={() => window.location.href = '/shop'}
+              >
+                Shop Now
+              </Button>
         </div>
       </section>
 

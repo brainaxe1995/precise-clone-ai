@@ -36,7 +36,7 @@ const Contact = () => {
       <section className="py-20 gradient-green-yellow text-center">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-6xl font-heading mb-6">
-            Contact <span className="text-primary">RLEX</span>
+            Contact <span className="text-primary">RELAX</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Have questions about our herbal teas? We're here to help you find the perfect blend for your needs.
@@ -181,9 +181,13 @@ const Contact = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-heading mb-6">Frequently Asked Questions</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Find quick answers to common questions about RLEX herbal teas.
+            Find quick answers to common questions about RELAX herbal teas.
           </p>
-          <Button variant="outline" className="glass-white">
+          <Button 
+            variant="outline" 
+            className="glass-white"
+            onClick={() => window.location.href = '/faq'}
+          >
             View All FAQs
           </Button>
         </div>

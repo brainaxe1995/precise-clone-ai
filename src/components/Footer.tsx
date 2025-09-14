@@ -26,10 +26,18 @@ const Footer = () => {
               Made with 100% organic ingredients for your wellness journey.
             </p>
             <div className="flex space-x-4">
-              <Facebook className="h-5 w-5 cursor-pointer hover:text-accent transition-colors" />
-              <Twitter className="h-5 w-5 cursor-pointer hover:text-accent transition-colors" />
-              <Instagram className="h-5 w-5 cursor-pointer hover:text-accent transition-colors" />
-              <Youtube className="h-5 w-5 cursor-pointer hover:text-accent transition-colors" />
+              <a href="https://facebook.com/relaxproduct" target="_blank" rel="noopener noreferrer">
+                <Facebook className="h-5 w-5 cursor-pointer hover:text-accent transition-colors" />
+              </a>
+              <a href="https://twitter.com/relaxproduct" target="_blank" rel="noopener noreferrer">
+                <Twitter className="h-5 w-5 cursor-pointer hover:text-accent transition-colors" />
+              </a>
+              <a href="https://instagram.com/relaxproduct" target="_blank" rel="noopener noreferrer">
+                <Instagram className="h-5 w-5 cursor-pointer hover:text-accent transition-colors" />
+              </a>
+              <a href="https://youtube.com/relaxproduct" target="_blank" rel="noopener noreferrer">
+                <Youtube className="h-5 w-5 cursor-pointer hover:text-accent transition-colors" />
+              </a>
             </div>
           </div>
 
@@ -50,7 +58,7 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li><Link to="/contact" className="hover:text-accent transition-colors opacity-90 hover:opacity-100">Contact Us</Link></li>
               <li><Link to="/faq" className="hover:text-accent transition-colors opacity-90 hover:opacity-100">FAQ</Link></li>
-              <li><span className="opacity-60">Free Shipping on All Orders</span></li>
+              <li><span className="opacity-60">Always Free Shipping</span></li>
               <li><span className="opacity-60">30-Day Wellness Guarantee</span></li>
             </ul>
           </div>

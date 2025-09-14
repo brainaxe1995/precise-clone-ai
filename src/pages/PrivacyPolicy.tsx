@@ -62,7 +62,7 @@ const PrivacyPolicy = () => {
               <p className="text-muted-foreground leading-relaxed">
                 If you have any questions about this Privacy Policy, please contact us at:
                 <br />
-                Email: privacy@rlex.com
+                Email: help@relaxproduct.com
                 <br />
                 Phone: +1 (555) 123-4567
               </p>

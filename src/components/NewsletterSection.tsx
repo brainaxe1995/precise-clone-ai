@@ -50,10 +50,10 @@ const NewsletterSection = () => {
             
             {/* Trust Indicators */}
             <div className="flex flex-wrap items-center gap-8 text-primary/80">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary">50K+</div>
-                <div className="text-sm">Happy Sleepers</div>
-              </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-primary">Growing</div>
+              <div className="text-sm">Community</div>
+            </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-primary">5★</div>
                 <div className="text-sm">Newsletter Rating</div>

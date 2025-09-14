@@ -2,33 +2,33 @@ const BrandLogosSection = () => {
   const brands = [
     {
       id: 1,
-      name: "Organic Certified",
+      name: "Natural Herbs",
       logo: "🌿",
-      description: "USDA Organic"
+      description: "Premium Quality"
     },
     {
       id: 2,
-      name: "Fair Trade",
-      logo: "🤝",
-      description: "Fair Trade Certified"
+      name: "European Sourced",
+      logo: "🇪🇺", 
+      description: "Ethically Sourced"
     },
     {
       id: 3,
-      name: "Non-GMO",
-      logo: "🌱",
-      description: "Non-GMO Project"
+      name: "Hand Selected",
+      logo: "✋",
+      description: "Premium Selection"
     },
     {
       id: 4,
-      name: "Rainforest Alliance",
-      logo: "🌳",
-      description: "Rainforest Certified"
+      name: "Quality Assured",
+      logo: "✅",
+      description: "Quality Controlled"
     },
     {
       id: 5,
-      name: "Carbon Neutral",
-      logo: "🌍",
-      description: "Carbon Neutral Certified"
+      name: "Sustainability",
+      logo: "♻️",
+      description: "Eco-Friendly Practices"
     }
   ];
 
@@ -36,8 +36,8 @@ const BrandLogosSection = () => {
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h3 className="text-2xl font-bold mb-4">Trusted Certifications</h3>
-          <p className="text-gray-600">Our commitment to quality, sustainability, and ethical sourcing</p>
+          <h3 className="text-2xl font-bold mb-4">Quality Commitment</h3>
+          <p className="text-gray-600">Our dedication to quality, sustainability, and ethical sourcing</p>
         </div>
         
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">

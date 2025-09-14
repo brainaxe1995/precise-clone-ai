@@ -15,7 +15,7 @@ const Terms = () => {
             <section>
               <h2 className="text-2xl font-heading mb-4">Acceptance of Terms</h2>
               <p className="text-muted-foreground leading-relaxed">
-                By accessing and using the RLEX website and purchasing our products, you accept and agree 
+                By accessing and using the RELAX website and purchasing our products, you accept and agree 
                 to be bound by the terms and provision of this agreement.
               </p>
             </section>
@@ -23,7 +23,7 @@ const Terms = () => {
             <section>
               <h2 className="text-2xl font-heading mb-4">Product Information</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                RLEX herbal teas are dietary supplements intended to support relaxation and may help 
+                RELAX herbal teas are dietary supplements intended to support relaxation and may help 
                 with sleep routines. Our products are not intended to diagnose, treat, cure, or 
                 prevent any disease.
               </p>
@@ -48,12 +48,12 @@ const Terms = () => {
             <section>
               <h2 className="text-2xl font-heading mb-4">Shipping and Delivery</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                We ship within the United States. Delivery times may vary based on location and shipping method selected.
+                We ship within Europe. Delivery times may vary based on location and shipping method selected.
               </p>
               <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
                 <li>Standard shipping: 5-7 business days</li>
                 <li>Express shipping: 2-3 business days</li>
-                <li>Free shipping on orders over $50</li>
+                <li>Always free shipping on all orders</li>
               </ul>
             </section>
 
@@ -68,7 +68,7 @@ const Terms = () => {
             <section>
               <h2 className="text-2xl font-heading mb-4">Limitation of Liability</h2>
               <p className="text-muted-foreground leading-relaxed">
-                RLEX shall not be liable for any direct, indirect, incidental, special, or consequential 
+                RELAX shall not be liable for any direct, indirect, incidental, special, or consequential 
                 damages resulting from the use or inability to use our products or website.
               </p>
             </section>
@@ -78,9 +78,11 @@ const Terms = () => {
               <p className="text-muted-foreground leading-relaxed">
                 Questions about these Terms of Service should be sent to us at:
                 <br />
-                Email: legal@rlex.com
+                Email: help@relaxproduct.com
                 <br />
-                Phone: +1 (555) 123-4567
+                Phone: +12892467209 / +31618474790
+                <br />
+                Address: Atlantica Marketing Beheer B.V., Tijnmuiden 15, 1046AK Amsterdam
               </p>
             </section>
           </div>

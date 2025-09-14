@@ -15,10 +15,10 @@ const ProductTabs = () => {
       price: 24.99,
       originalPrice: 34.99,
       rating: 4.8,
-      reviews: 342,
+      reviews: 0, // New product
       image: productChamomile,
       badge: "Best Seller",
-      benefits: ["May support relaxation", "Caffeine-free", "USDA Organic"]
+      benefits: ["May support relaxation", "Caffeine-free", "Natural herbs"]
     },
     {
       id: 2,
@@ -27,7 +27,7 @@ const ProductTabs = () => {
       price: 29.99,
       originalPrice: 39.99,
       rating: 4.9,
-      reviews: 288,
+      reviews: 0, // New product
       image: productLavender,
       badge: "Premium",
       benefits: ["Natural calming herbs", "Evening routine support", "Premium quality"]
@@ -38,7 +38,7 @@ const ProductTabs = () => {
       description: "Fresh lemon blend for tranquil moments",
       price: 26.99,
       rating: 4.7,
-      reviews: 189,
+      reviews: 0, // New product
       image: productLemon,
       benefits: ["Caffeine-free", "Citrus flavor", "Evening wellness"]
     },
@@ -49,7 +49,7 @@ const ProductTabs = () => {
       price: 39.99,
       originalPrice: 49.99,
       rating: 5.0,
-      reviews: 156,
+      reviews: 0, // New product
       image: "https://afterdarkusa.com/wp-content/uploads/2025/09/teaPackges.png",
       badge: "Limited Edition",
       benefits: ["Expert curated", "Premium selection", "Limited availability"]

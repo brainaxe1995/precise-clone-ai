@@ -17,10 +17,10 @@ const Shop = () => {
       price: 24.99,
       originalPrice: 34.99,
       rating: 4.8,
-      reviews: 342,
+      reviews: 0, // New product
       image: productChamomile,
       badge: "Best Seller",
-      benefits: ["May support relaxation", "Caffeine-free", "USDA Organic"]
+      benefits: ["May support relaxation", "Caffeine-free", "Natural herbs"]
     },
     {
       id: 2,
@@ -29,7 +29,7 @@ const Shop = () => {
       price: 29.99,
       originalPrice: 39.99,
       rating: 4.9,
-      reviews: 288,
+      reviews: 0, // New product
       image: productLavender,
       badge: "Premium",
       benefits: ["Natural calming herbs", "Evening routine support", "Premium quality"]
@@ -40,7 +40,7 @@ const Shop = () => {
       description: "Fresh lemon blend for tranquil moments",
       price: 26.99,
       rating: 4.7,
-      reviews: 189,
+      reviews: 0, // New product
       image: productLemon,
       benefits: ["Caffeine-free", "Citrus flavor", "Evening wellness"]
     },
@@ -51,7 +51,7 @@ const Shop = () => {
       price: 39.99,
       originalPrice: 49.99,
       rating: 5.0,
-      reviews: 156,
+      reviews: 0, // New product
       image: "https://afterdarkusa.com/wp-content/uploads/2025/09/teaPackges.png",
       badge: "Limited Edition",
       benefits: ["Expert curated", "Premium selection", "Limited availability"]
@@ -70,7 +70,7 @@ const Shop = () => {
               Natural Evening Wellness with <span className="gradient-text">RELAX Tea</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-slide-up">
-              Discover our collection of premium herbal teas crafted in the USA to support your relaxation and evening routine.
+              Discover our collection of premium herbal teas crafted in Europe to support your relaxation and evening routine.
             </p>
           </div>
         </div>
@@ -214,7 +214,7 @@ const Shop = () => {
             <div className="hover-lift">
               <div className="text-5xl mb-4">🚚</div>
               <h3 className="font-semibold text-xl mb-2">Always Free Shipping</h3>
-              <p className="text-base text-muted-foreground">Fast delivery across the USA</p>
+              <p className="text-base text-muted-foreground">Fast delivery across Europe</p>
             </div>
             <div className="hover-lift">
               <div className="text-5xl mb-4">💰</div>

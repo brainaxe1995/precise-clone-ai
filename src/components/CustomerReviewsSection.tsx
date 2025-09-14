@@ -46,7 +46,7 @@ const CustomerReviewsSection = () => {
   ];
 
   const overallRating = 4.8;
-  const totalReviews = 1247;
+  const totalReviews = 0; // New product brand, no reviews yet
 
   return (
     <section className="py-20 bg-background">
@@ -54,108 +54,33 @@ const CustomerReviewsSection = () => {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Customer Reviews</h2>
-          <div className="flex items-center justify-center space-x-2 mb-4">
-            <div className="flex items-center space-x-1">
-              {[...Array(5)].map((_, i) => (
-                <Star 
-                  key={i} 
-                  className={`h-5 w-5 ${
-                    i < Math.floor(overallRating) 
-                      ? "fill-yellow-400 text-yellow-400" 
-                      : "text-gray-300"
-                  }`} 
-                />
-              ))}
-            </div>
-            <span className="text-lg font-semibold">{overallRating}</span>
-            <span className="text-gray-600">({totalReviews.toLocaleString()} reviews)</span>
+          <div className="text-center mb-4">
+            <p className="text-lg font-semibold text-primary mb-2">New Product Launch</p>
+            <p className="text-gray-600">Be among the first to try our premium herbal teas and share your experience!</p>
           </div>
-          <p className="text-gray-600">See what our customers are saying about their tea experience</p>
         </div>
 
-        {/* Reviews Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {reviews.map((review) => (
-            <Card key={review.id} className="hover:shadow-lg transition-shadow duration-300">
-              <CardContent className="p-6">
-                {/* Rating & Date */}
-                <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center space-x-1">
-                    {[...Array(review.rating)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                  <span className="text-xs text-gray-500">{review.date}</span>
-                </div>
-                
-                {/* Title */}
-                <h3 className="font-semibold text-sm mb-2">{review.title}</h3>
-                
-                {/* Review Text */}
-                <p className="text-sm text-gray-600 mb-4 line-clamp-4">{review.text}</p>
-                
-                {/* Author */}
-                <div className="flex items-center space-x-3">
-                  <img 
-                    src={review.avatar} 
-                    alt={review.name}
-                    className="w-8 h-8 rounded-full object-cover"
-                  />
-                  <div className="flex-1">
-                    <div className="flex items-center space-x-2">
-                      <span className="text-sm font-medium">{review.name}</span>
-                      {review.verified && (
-                        <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">
-                          Verified
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        {/* Rating Breakdown */}
-        <div className="bg-gray-50 rounded-lg p-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Left - Overall Stats */}
-            <div className="text-center">
-              <div className="text-5xl font-bold mb-2">{overallRating}</div>
-              <div className="flex items-center justify-center space-x-1 mb-2">
-                {[...Array(5)].map((_, i) => (
-                  <Star 
-                    key={i} 
-                    className={`h-5 w-5 ${
-                      i < Math.floor(overallRating) 
-                        ? "fill-yellow-400 text-yellow-400" 
-                        : "text-gray-300"
-                    }`} 
-                  />
-                ))}
-              </div>
-              <div className="text-gray-600">{totalReviews.toLocaleString()} total reviews</div>
-            </div>
-            
-            {/* Right - Rating Distribution */}
-            <div className="space-y-2">
-              {[5, 4, 3, 2, 1].map((stars) => {
-                const percentage = stars === 5 ? 78 : stars === 4 ? 18 : stars === 3 ? 3 : stars === 2 ? 1 : 0;
-                return (
-                  <div key={stars} className="flex items-center space-x-3">
-                    <span className="text-sm w-8">{stars} ★</span>
-                    <div className="flex-1 bg-gray-200 rounded-full h-2">
-                      <div 
-                        className="bg-yellow-400 h-2 rounded-full" 
-                        style={{ width: `${percentage}%` }}
-                      ></div>
-                    </div>
-                    <span className="text-sm text-gray-600 w-8">{percentage}%</span>
-                  </div>
-                );
-              })}
-            </div>
+        {/* Coming Soon Message */}
+        <div className="bg-secondary/10 rounded-2xl p-12 text-center mb-12">
+          <div className="text-6xl mb-4">🌟</div>
+          <h3 className="text-2xl font-bold mb-4">Your Review Could Be First!</h3>
+          <p className="text-lg text-muted-foreground mb-6">
+            As a brand new product, we're excited to hear from our early customers. 
+            Try our premium European herbal teas and let us know what you think.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button 
+              className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors"
+              onClick={() => window.location.href = '/shop'}
+            >
+              Shop Now & Be First to Review
+            </button>
+            <button 
+              className="border border-primary text-primary px-6 py-3 rounded-lg font-medium hover:bg-primary/10 transition-colors"
+              onClick={() => window.location.href = 'mailto:help@relaxproduct.com?subject=Product Review'}
+            >
+              Share Your Experience
+            </button>
           </div>
         </div>
       </div>

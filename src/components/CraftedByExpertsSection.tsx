@@ -43,7 +43,7 @@ const CraftedByExpertsSection = () => {
               Tea Experts
             </h2>
             <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
-              Our team of certified tea masters and sommeliers work directly with tea gardens 
+              Our team of expert tea masters and sommeliers work directly with tea gardens 
               around the world to source the finest leaves and create exceptional blends that 
               meet our rigorous quality standards.
             </p>
@@ -55,7 +55,7 @@ const CraftedByExpertsSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-xl mb-2">Expert Curation</h4>
-                  <p className="text-muted-foreground text-lg">Hand-selected by certified tea masters</p>
+                  <p className="text-muted-foreground text-lg">Hand-selected by expert tea masters</p>
                 </div>
               </div>
               
@@ -80,7 +80,11 @@ const CraftedByExpertsSection = () => {
               </div>
             </div>
             
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-semibold text-lg px-8 py-4 rounded-full shadow-lg hover-lift">
+            <Button 
+              size="lg" 
+              className="bg-primary hover:bg-primary/90 text-white font-semibold text-lg px-8 py-4 rounded-full shadow-lg hover-lift"
+              onClick={() => window.location.href = '/about'}
+            >
               Meet Our Experts
             </Button>
           </div>
