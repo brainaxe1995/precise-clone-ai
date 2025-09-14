@@ -35,10 +35,12 @@ const Header = () => {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="default" size="sm" className="bg-green-800 hover:bg-green-700 text-white font-bold">
-              <ShoppingCart className="h-4 w-4 mr-2" />
-              Shop Now
-            </Button>
+            <Link to="/shop" onClick={() => window.scrollTo(0, 0)}>
+              <Button variant="default" size="sm" className="bg-green-800 hover:bg-green-700 text-white font-bold">
+                <ShoppingCart className="h-4 w-4 mr-2" />
+                Shop Now
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -63,10 +65,12 @@ const Header = () => {
               <Link to="/contact" onClick={() => { window.scrollTo(0, 0); setIsMenuOpen(false); }} className="text-sm font-medium hover:text-primary transition-colors">Contact</Link>
               <Link to="/faq" onClick={() => { window.scrollTo(0, 0); setIsMenuOpen(false); }} className="text-sm font-medium hover:text-primary transition-colors">FAQ</Link>
               <div className="flex flex-col space-y-3 pt-4 border-t border-border">
-                <Button variant="default" className="bg-green-800 hover:bg-green-700 text-white font-bold">
-                  <ShoppingCart className="h-4 w-4 mr-2" />
-                  Shop Now
-                </Button>
+                <Link to="/shop" onClick={() => { window.scrollTo(0, 0); setIsMenuOpen(false); }}>
+                  <Button variant="default" className="bg-green-800 hover:bg-green-700 text-white font-bold w-full">
+                    <ShoppingCart className="h-4 w-4 mr-2" />
+                    Shop Now
+                  </Button>
+                </Link>
               </div>
             </nav>
           </div>

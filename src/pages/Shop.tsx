@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Star, Filter, SlidersHorizontal } from "lucide-react";
+import { Star } from "lucide-react";
 import productChamomile from "@/assets/product-chamomile.png";
 import productLavender from "@/assets/product-lavender.png";
 import productLemon from "@/assets/product-lemon.png";
@@ -76,23 +76,13 @@ const Shop = () => {
         </div>
       </section>
 
-      {/* Filters */}
+      {/* Product Count */}
       <section className="py-10 border-b animate-slide-up">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex flex-col md:flex-row justify-center items-center">
             <p className="text-base text-muted-foreground">
-              Showing {products.length} products
+              Showing {products.length} premium herbal tea products
             </p>
-            <div className="flex gap-4">
-              <Button variant="outline" className="glass-white font-semibold hover-lift">
-                <Filter className="h-5 w-5 mr-2" />
-                Filter
-              </Button>
-              <Button variant="outline" className="glass-white font-semibold hover-lift">
-                <SlidersHorizontal className="h-5 w-5 mr-2" />
-                Sort by
-              </Button>
-            </div>
           </div>
         </div>
       </section>

@@ -1,15 +1,26 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
+import { toast } from "@/components/ui/use-toast";
 
 const NewsletterSection = () => {
   const [email, setEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle newsletter signup
-    console.log("Newsletter signup:", email);
-    setEmail("");
+    setIsLoading(true);
+    
+    // Simulate API call with 2 second delay
+    setTimeout(() => {
+      setIsLoading(false);
+      toast({
+        title: "Success!",
+        description: "You've been subscribed to our newsletter. Welcome to the RELAX Sleep Club!",
+        duration: 5000,
+      });
+      setEmail("");
+    }, 2000);
   };
 
   return (
@@ -41,9 +52,10 @@ const NewsletterSection = () => {
                 />
                 <Button 
                   type="submit"
+                  disabled={isLoading}
                   className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 whitespace-nowrap"
                 >
-                  Join Now
+                  {isLoading ? "Joining..." : "Join Now"}
                 </Button>
               </div>
             </form>

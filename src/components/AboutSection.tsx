@@ -1,4 +1,6 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import ourStoryImage from "@/assets/our-story.jpg";
 
 const AboutSection = () => {
   return (
@@ -22,13 +24,24 @@ const AboutSection = () => {
           </p>
           
           {/* CTA Button */}
-          <Button 
-            variant="outline" 
-            size="lg" 
-            className="border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 text-base font-medium transition-all duration-300 animate-bounce-in"
-          >
-            Discover Our Story
-          </Button>
+          <Link to="/about" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 text-base font-medium transition-all duration-300 animate-bounce-in"
+            >
+              Discover Our Story
+            </Button>
+          </Link>
+          
+          {/* Our Story Image */}
+          <div className="mt-12">
+            <img 
+              src={ourStoryImage} 
+              alt="Our story of crafting premium herbal teas in Europe" 
+              className="w-full max-w-2xl mx-auto rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-700"
+            />
+          </div>
         </div>
       </div>
     </section>

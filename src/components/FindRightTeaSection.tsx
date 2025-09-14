@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import teaPlantationImage from "@/assets/tea-plantation.jpg";
 
 const FindRightTeaSection = () => {
@@ -26,12 +27,14 @@ const FindRightTeaSection = () => {
             Join thousands who have made Relax Herbal Tea part of their nightly routine for better rest and relaxation.
           </p>
           
-          <Button 
-            size="lg" 
-            className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-3 text-base font-medium"
-          >
-            Shop Premium Blends
-          </Button>
+          <Link to="/shop" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            <Button 
+              size="lg" 
+              className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-3 text-base font-medium"
+            >
+              Shop Premium Blends
+            </Button>
+          </Link>
           
           {/* Additional Info */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">

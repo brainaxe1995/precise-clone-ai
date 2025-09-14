@@ -45,10 +45,10 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4 text-lg">Quick Links</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link to="/about" className="hover:text-accent transition-colors opacity-90 hover:opacity-100">About Us</Link></li>
-              <li><Link to="/shop" className="hover:text-accent transition-colors opacity-90 hover:opacity-100">Shop Now</Link></li>
-              <li><Link to="/blog" className="hover:text-accent transition-colors opacity-90 hover:opacity-100">Wellness Blog</Link></li>
-              <li><Link to="/contact" className="hover:text-accent transition-colors opacity-90 hover:opacity-100">Contact Us</Link></li>
+              <li><Link to="/about" onClick={() => window.scrollTo(0, 0)} className="hover:text-accent transition-colors opacity-90 hover:opacity-100">About Us</Link></li>
+              <li><Link to="/shop" onClick={() => window.scrollTo(0, 0)} className="hover:text-accent transition-colors opacity-90 hover:opacity-100">Shop Now</Link></li>
+              <li><Link to="/blog" onClick={() => window.scrollTo(0, 0)} className="hover:text-accent transition-colors opacity-90 hover:opacity-100">Wellness Blog</Link></li>
+              <li><Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="hover:text-accent transition-colors opacity-90 hover:opacity-100">Contact Us</Link></li>
             </ul>
           </div>
 
@@ -56,8 +56,8 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4 text-lg">Customer Service</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link to="/contact" className="hover:text-accent transition-colors opacity-90 hover:opacity-100">Contact Us</Link></li>
-              <li><Link to="/faq" className="hover:text-accent transition-colors opacity-90 hover:opacity-100">FAQ</Link></li>
+              <li><Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="hover:text-accent transition-colors opacity-90 hover:opacity-100">Contact Us</Link></li>
+              <li><Link to="/faq" onClick={() => window.scrollTo(0, 0)} className="hover:text-accent transition-colors opacity-90 hover:opacity-100">FAQ</Link></li>
               <li><span className="opacity-60">Always Free Shipping</span></li>
               <li><span className="opacity-60">30-Day Wellness Guarantee</span></li>
             </ul>
@@ -71,15 +71,15 @@ const Footer = () => {
             <div className="space-y-3 text-sm mb-6">
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-accent" />
-                <span className="opacity-90">help@relaxproduct.com</span>
+                <a href="mailto:help@relaxproduct.com" className="opacity-90 hover:text-accent transition-colors">help@relaxproduct.com</a>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-accent" />
-                <span className="opacity-90">+12892467209</span>
+                <a href="tel:+12892467209" className="opacity-90 hover:text-accent transition-colors">+12892467209</a>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-accent" />
-                <span className="opacity-90">+31618474790</span>
+                <a href="tel:+31618474790" className="opacity-90 hover:text-accent transition-colors">+31618474790</a>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="h-4 w-4 text-accent mt-0.5" />
@@ -96,16 +96,16 @@ const Footer = () => {
             <p className="text-sm opacity-80 mb-4">© 2025 RELAX Tea. All rights reserved.</p>
             <div className="flex flex-col md:flex-row justify-center items-center gap-6">
               <div className="flex gap-6">
-                <Link to="/privacy" className="text-sm hover:text-accent transition-colors opacity-80 hover:opacity-100">
+                <Link to="/privacy" onClick={() => window.scrollTo(0, 0)} className="text-sm hover:text-accent transition-colors opacity-80 hover:opacity-100">
                   Privacy Policy
                 </Link>
-                <Link to="/terms" className="text-sm hover:text-accent transition-colors opacity-80 hover:opacity-100">
+                <Link to="/terms" onClick={() => window.scrollTo(0, 0)} className="text-sm hover:text-accent transition-colors opacity-80 hover:opacity-100">
                   Terms of Service
                 </Link>
-                <Link to="/cookies" className="text-sm hover:text-accent transition-colors opacity-80 hover:opacity-100">
+                <Link to="/cookies" onClick={() => window.scrollTo(0, 0)} className="text-sm hover:text-accent transition-colors opacity-80 hover:opacity-100">
                   Cookie Policy
                 </Link>
-                <Link to="/accessibility" className="text-sm hover:text-accent transition-colors opacity-80 hover:opacity-100">
+                <Link to="/accessibility" onClick={() => window.scrollTo(0, 0)} className="text-sm hover:text-accent transition-colors opacity-80 hover:opacity-100">
                   Accessibility
                 </Link>
               </div>

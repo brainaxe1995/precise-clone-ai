@@ -62,9 +62,14 @@ const PrivacyPolicy = () => {
               <p className="text-muted-foreground leading-relaxed">
                 If you have any questions about this Privacy Policy, please contact us at:
                 <br />
-                Email: help@relaxproduct.com
+                Email: <a href="mailto:help@relaxproduct.com" className="text-primary hover:underline">help@relaxproduct.com</a>
                 <br />
-                Phone: +1 (555) 123-4567
+                Phone: <a href="tel:+12892467209" className="text-primary hover:underline">+12892467209</a> or <a href="tel:+31618474790" className="text-primary hover:underline">+31618474790</a>
+                <br /><br />
+                Atlantica Marketing Beheer B.V.<br />
+                Kvk-nummer 92016995<br />
+                Tijnmuiden 15<br />
+                1046AK Amsterdam
               </p>
             </section>
           </div>

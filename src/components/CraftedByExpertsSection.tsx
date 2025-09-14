@@ -1,10 +1,41 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
+import { Link } from "react-router-dom";
 import teaExpertImage from "@/assets/tea-expert.jpg";
 import testimonialSarah from "@/assets/testimonial-sarah.jpg";
+import teamEmma from "@/assets/team-emma.jpg";
+import teamPieter from "@/assets/team-pieter.jpg";
+import teamLars from "@/assets/team-lars.jpg";
 
 const CraftedByExpertsSection = () => {
+  const teamMembers = [
+    {
+      id: 1,
+      name: "Emma van der Berg",
+      role: "Head Tea Master",
+      email: "team@relaxproduct.com",
+      image: teamEmma,
+      bio: "With over 15 years of experience in European tea crafting"
+    },
+    {
+      id: 2,
+      name: "Pieter Jansen", 
+      role: "Quality Director",
+      email: "team@relaxproduct.com",
+      image: teamPieter,
+      bio: "Ensuring every blend meets our premium standards"
+    },
+    {
+      id: 3,
+      name: "Lars de Vries",
+      role: "Tea Sommelier",
+      email: "team@relaxproduct.com", 
+      image: teamLars,
+      bio: "Expert in herbal tea blending and flavor profiles"
+    }
+  ];
+
   const testimonials = [
     {
       id: 1,
@@ -80,18 +111,44 @@ const CraftedByExpertsSection = () => {
               </div>
             </div>
             
-            <Button 
-              size="lg" 
-              className="bg-primary hover:bg-primary/90 text-white font-semibold text-lg px-8 py-4 rounded-full shadow-lg hover-lift"
-              onClick={() => window.location.href = '/about'}
-            >
-              Meet Our Experts
-            </Button>
+            <Link to="/about" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary/90 text-white font-semibold text-lg px-8 py-4 rounded-full shadow-lg hover-lift"
+              >
+                Meet Our Experts
+              </Button>
+            </Link>
           </div>
           
-          {/* Right Content - Expert Image & Testimonials */}
+          {/* Right Content - Team Members & Testimonials */}
           <div className="space-y-8 animate-slide-in-right">
-            <div className="relative hover-lift">
+            {/* Team Members */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              {teamMembers.map((member) => (
+                <Card key={member.id} className="text-center hover-lift">
+                  <CardContent className="p-6">
+                    <img 
+                      src={member.image} 
+                      alt={member.name}
+                      className="w-20 h-20 rounded-full mx-auto mb-4 object-cover shadow-lg"
+                    />
+                    <h4 className="font-semibold text-lg mb-1">{member.name}</h4>
+                    <p className="text-sm text-muted-foreground mb-2">{member.role}</p>
+                    <p className="text-xs text-muted-foreground mb-3">{member.bio}</p>
+                    <a 
+                      href={`mailto:${member.email}`}
+                      className="text-primary text-sm hover:underline"
+                    >
+                      Contact {member.name.split(' ')[0]}
+                    </a>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            
+            {/* Expert Image */}
+            <div className="relative hover-lift mb-6">
               <img 
                 src="https://afterdarkusa.com/wp-content/uploads/2025/09/expert.png"
                 alt="Tea expert examining tea leaves" 

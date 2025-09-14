@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-tea-pouring.jpg";
 
 const HeroSection = () => {
@@ -35,35 +36,23 @@ const HeroSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Button 
-                size="lg" 
-                className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 text-lg font-bold transition-all duration-500 hover:scale-105 shadow-xl rounded-full"
-                onClick={() => {
-                  const shopElement = document.querySelector('#shop-section');
-                  if (shopElement) {
-                    shopElement.scrollIntoView({ behavior: 'smooth' });
-                  } else {
-                    window.location.href = '/shop';
-                  }
-                }}
-              >
-                Shop RELAX Tea Now
-              </Button>
-              <Button 
-                variant="outline"
-                size="lg" 
-                className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-4 text-lg font-bold transition-all duration-500 rounded-full"
-                onClick={() => {
-                  const aboutElement = document.querySelector('#about-section');
-                  if (aboutElement) {
-                    aboutElement.scrollIntoView({ behavior: 'smooth' });
-                  } else {
-                    window.location.href = '/about';
-                  }
-                }}
-              >
-                Learn More
-              </Button>
+              <Link to="/shop" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                <Button 
+                  size="lg" 
+                  className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 text-lg font-bold transition-all duration-500 hover:scale-105 shadow-xl rounded-full"
+                >
+                  Shop RELAX Tea Now
+                </Button>
+              </Link>
+              <Link to="/about" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                <Button 
+                  variant="outline"
+                  size="lg" 
+                  className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-4 text-lg font-bold transition-all duration-500 rounded-full"
+                >
+                  Learn More
+                </Button>
+              </Link>
             </div>
 
             {/* Benefits */}
