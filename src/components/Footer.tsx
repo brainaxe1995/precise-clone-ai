@@ -17,7 +17,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2 mb-4">
               <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                <img src="/src/assets/relax-logo.png" alt="RELAX" className="h-8 w-auto mb-2" />
+                <img src="https://pay.relaxproduct.com/wp-content/uploads/2025/09/logo.png" alt="RELAX" className="h-8 w-auto mb-2" />
               </Link>
             </div>
             <p className="text-sm opacity-90 leading-relaxed mb-4">

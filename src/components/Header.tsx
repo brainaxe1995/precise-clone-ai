@@ -18,7 +18,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-              <img src="/src/assets/relax-logo.png" alt="RELAX" className="h-8 w-auto" />
+              <img src="https://pay.relaxproduct.com/wp-content/uploads/2025/09/logo.png" alt="RELAX" className="h-8 w-auto" />
             </Link>
           </div>
 
