@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const CustomerReviewsSection = () => {
   const reviews = [
@@ -69,18 +70,16 @@ const CustomerReviewsSection = () => {
             Try our premium European herbal teas and let us know what you think.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button 
-              className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors"
-              onClick={() => window.location.href = '/shop'}
-            >
-              Shop Now & Be First to Review
-            </button>
-            <button 
-              className="border border-primary text-primary px-6 py-3 rounded-lg font-medium hover:bg-primary/10 transition-colors"
-              onClick={() => window.location.href = 'mailto:help@relaxproduct.com?subject=Product Review'}
-            >
-              Share Your Experience
-            </button>
+            <Link to="/shop" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+              <button className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors">
+                Shop Now & Be First to Review
+              </button>
+            </Link>
+            <a href="mailto:help@relaxproduct.com?subject=Product Review">
+              <button className="border border-primary text-primary px-6 py-3 rounded-lg font-medium hover:bg-primary/10 transition-colors">
+                Share Your Experience
+              </button>
+            </a>
           </div>
         </div>
       </div>

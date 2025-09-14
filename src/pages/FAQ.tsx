@@ -6,6 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Link } from "react-router-dom";
 
 const FAQ = () => {
   const faqs = [
@@ -122,18 +123,16 @@ const FAQ = () => {
             Our customer support team is here to help. Reach out to us and we'll get back to you within 24 hours.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-lg font-medium transition-colors"
-              onClick={() => window.location.href = '/contact'}
-            >
-              Contact Support
-            </button>
-            <button 
-              className="glass-white border border-white/30 hover:bg-white/10 px-6 py-3 rounded-lg font-medium transition-colors"
-              onClick={() => window.location.href = 'mailto:help@relaxproduct.com'}
-            >
-              Email Us
-            </button>
+            <Link to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+              <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-lg font-medium transition-colors">
+                Contact Support
+              </button>
+            </Link>
+            <a href="mailto:help@relaxproduct.com">
+              <button className="glass-white border border-white/30 hover:bg-white/10 px-6 py-3 rounded-lg font-medium transition-colors">
+                Email Us
+              </button>
+            </a>
           </div>
         </div>
       </section>

@@ -1,3 +1,5 @@
+import { NavigateFunction } from 'react-router-dom';
+
 /**
  * Utility function to scroll to top of page
  */
@@ -6,9 +8,16 @@ export const scrollToTop = () => {
 };
 
 /**
- * Navigate to a page and scroll to top
+ * Navigate to external URL
  */
-export const navigateToPage = (path: string) => {
-  window.location.href = path;
-  // Scroll to top will happen automatically on page load
+export const navigateToExternalUrl = (url: string) => {
+  window.location.href = url;
+};
+
+/**
+ * Navigate to a page and scroll to top using React Router
+ */
+export const navigateToPage = (navigate: NavigateFunction, path: string) => {
+  navigate(path);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 };

@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -183,13 +184,11 @@ const Contact = () => {
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
             Find quick answers to common questions about RELAX herbal teas.
           </p>
-          <Button 
-            variant="outline" 
-            className="glass-white"
-            onClick={() => window.location.href = '/faq'}
-          >
-            View All FAQs
-          </Button>
+          <Link to="/faq" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            <Button variant="outline" className="glass-white">
+              View All FAQs
+            </Button>
+          </Link>
         </div>
       </section>
 

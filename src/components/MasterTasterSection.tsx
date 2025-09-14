@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import teaPackageImage from "@/assets/tea-package-green.jpg";
+import { Link } from "react-router-dom";
 
 const MasterTasterSection = () => {
   return (
@@ -92,14 +93,15 @@ const MasterTasterSection = () => {
               </div>
             </div>
             
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-accent text-accent hover:bg-accent hover:text-white"
-              onClick={() => window.location.href = '/about'}
-            >
-              Learn More About Our Process
-            </Button>
+            <Link to="/about" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-accent text-accent hover:bg-accent hover:text-white"
+              >
+                Learn More About Our Process
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

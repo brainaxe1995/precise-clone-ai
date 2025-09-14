@@ -3,6 +3,11 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Leaf, Heart, Shield, Award } from "lucide-react";
+import { Link } from "react-router-dom";
+import teamEmma from "@/assets/team-emma.jpg";
+import teamPieter from "@/assets/team-pieter.jpg";
+import teamSophie from "@/assets/team-sophie.jpg";
+import ourStoryImage from "@/assets/our-story-image.jpg";
 
 const About = () => {
   return (
@@ -38,17 +43,18 @@ const About = () => {
                 sourced responsibly from trusted growers around the world. Each cup 
                 represents our commitment to quality and your wellbeing.
               </p>
-              <Button 
-                className="bg-primary hover:bg-primary/90"
-                onClick={() => window.location.href = '/shop'}
-              >
-                Shop Our Collection
-              </Button>
+              <Link to="/shop" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                <Button className="bg-primary hover:bg-primary/90">
+                  Shop Our Collection
+                </Button>
+              </Link>
             </div>
             <div className="glass-card p-8 rounded-2xl">
-              <div className="aspect-square bg-gradient-green-yellow rounded-xl flex items-center justify-center">
-                <span className="text-8xl">🍃</span>
-              </div>
+              <img 
+                src={ourStoryImage} 
+                alt="Our story of crafting premium herbal teas" 
+                className="w-full rounded-xl shadow-lg"
+              />
             </div>
           </div>
         </div>
@@ -129,28 +135,35 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                name: "Anna van der Berg",
+                name: "Emma van der Berg",
                 role: "Founder & Tea Expert",
                 description: "20+ years in herbal wellness and sustainable sourcing",
-                email: "team@relaxproduct.com"
+                email: "team@relaxproduct.com",
+                image: teamEmma
               },
               {
                 name: "Pieter Janssen",
                 role: "Quality Assurance Manager", 
                 description: "Ensures every batch meets our rigorous quality standards",
-                email: "team@relaxproduct.com"
+                email: "team@relaxproduct.com",
+                image: teamPieter
               },
               {
                 name: "Sophie Vermeer",
                 role: "Customer Experience Lead",
                 description: "Dedicated to making your RELAX journey exceptional", 
-                email: "team@relaxproduct.com"
+                email: "team@relaxproduct.com",
+                image: teamSophie
               }
             ].map((member, index) => (
               <Card key={index} className="glass-card text-center p-8 hover-scale">
                 <CardContent className="p-0">
-                  <div className="w-24 h-24 bg-gradient-green-yellow rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-3xl">👤</span>
+                  <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                    <img 
+                      src={member.image} 
+                      alt={`${member.name} - ${member.role}`}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <h3 className="font-heading text-xl mb-2">{member.name}</h3>
                   <p className="text-primary font-medium mb-3">{member.role}</p>
@@ -177,13 +190,14 @@ const About = () => {
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
             Join thousands of customers who trust RELAX for their evening relaxation routine.
           </p>
-              <Button 
-                size="lg" 
-                className="bg-primary hover:bg-primary/90 px-8 py-4"
-                onClick={() => window.location.href = '/shop'}
-              >
-                Shop Now
-              </Button>
+              <Link to="/shop" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                <Button 
+                  size="lg" 
+                  className="bg-primary hover:bg-primary/90 px-8 py-4"
+                >
+                  Shop Now
+                </Button>
+              </Link>
         </div>
       </section>
 
