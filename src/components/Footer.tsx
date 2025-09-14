@@ -16,9 +16,6 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="glass-green p-2 rounded-lg">
-                <span className="text-xl">🍃</span>
-              </div>
               <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                 <img src="/src/assets/relax-logo.png" alt="RELAX" className="h-8 w-auto mb-2" />
               </Link>
